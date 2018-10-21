@@ -14,7 +14,7 @@
 
         public string AnswerD { get; set; }
 
-        public char GoodAnswer { get; set; }
+        public string GoodAnswer { get; set; }
 
         public string Category { get; set; }
     }

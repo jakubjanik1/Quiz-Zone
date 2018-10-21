@@ -1,9 +1,9 @@
 ﻿using Quiz_Zone.Repository;
+using System.Web.Mvc;
+using System.Linq;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
+using Quiz_Zone.Models;
 
 namespace Quiz_Zone.Controllers
 {
@@ -16,9 +16,23 @@ namespace Quiz_Zone.Controllers
             repository = repo;            
         }
 
-        public ViewResult Index()
+        public ViewResult Quizzes()
         {
-            return View(repository.Questions);
+            return View(repository.Questions
+                .Select(x => x.Category)
+                .Distinct());
+        }
+
+        public ViewResult Play(string category)
+        {
+            var random = new Random();
+            var questions = new List<Question>();
+            for (int i = 0; i < 2; i++)
+            {
+                var index = random.Next(0, 4);
+                questions.Add(repository.Questions.ElementAt(index));
+            }
+            return View(questions);
         }
     }
 }

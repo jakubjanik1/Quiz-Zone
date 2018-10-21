@@ -1,0 +1,19 @@
+﻿@using Quiz_Zone.Models
+@model IEnumerable<string>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Quizzes</title>
+</head>
+<body>
+    @foreach(var category in Model)
+    {
+        @Html.ActionLink(category, "Play", new { category = category })
+    }
+</body>
+</html>

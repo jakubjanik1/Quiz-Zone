@@ -132,7 +132,8 @@
   <ItemGroup>
     <Content Include="Views\web.config" />
     <None Include="packages.config" />
-    <Content Include="Views\Main\Index.cshtml" />
+    <Content Include="Views\Main\Quizzes.cshtml" />
+    <Content Include="Views\Main\Play.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
