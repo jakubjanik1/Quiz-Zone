@@ -1,0 +1,82 @@
+C:\Users\jakub\Projects\WebProjects\Quiz Zone\Quiz Zone\bin\Quiz Zone.dll.config
+C:\Users\jakub\Projects\WebProjects\Quiz Zone\Quiz Zone\bin\Quiz Zone.dll
+C:\Users\jakub\Projects\WebProjects\Quiz Zone\Quiz Zone\bin\Quiz Zone.pdb
+C:\Users\jakub\Projects\WebProjects\Quiz Zone\Quiz Zone\bin\roslyn\csc.exe
+C:\Users\jakub\Projects\WebProjects\Quiz Zone\Quiz Zone\bin\roslyn\csc.exe.config
+C:\Users\jakub\Projects\WebProjects\Quiz Zone\Quiz Zone\bin\roslyn\csc.rsp
+C:\Users\jakub\Projects\WebProjects\Quiz Zone\Quiz Zone\bin\roslyn\csi.exe
+C:\Users\jakub\Projects\WebProjects\Quiz Zone\Quiz Zone\bin\roslyn\csi.exe.config
+C:\Users\jakub\Projects\WebProjects\Quiz Zone\Quiz Zone\bin\roslyn\csi.rsp
+C:\Users\jakub\Projects\WebProjects\Quiz Zone\Quiz Zone\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\jakub\Projects\WebProjects\Quiz Zone\Quiz Zone\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\jakub\Projects\WebProjects\Quiz Zone\Quiz Zone\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\jakub\Projects\WebProjects\Quiz Zone\Quiz Zone\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\jakub\Projects\WebProjects\Quiz Zone\Quiz Zone\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\jakub\Projects\WebProjects\Quiz Zone\Quiz Zone\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\jakub\Projects\WebProjects\Quiz Zone\Quiz Zone\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\jakub\Projects\WebProjects\Quiz Zone\Quiz Zone\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\jakub\Projects\WebProjects\Quiz Zone\Quiz Zone\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\jakub\Projects\WebProjects\Quiz Zone\Quiz Zone\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\jakub\Projects\WebProjects\Quiz Zone\Quiz Zone\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\jakub\Projects\WebProjects\Quiz Zone\Quiz Zone\bin\roslyn\System.AppContext.dll
+C:\Users\jakub\Projects\WebProjects\Quiz Zone\Quiz Zone\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\jakub\Projects\WebProjects\Quiz Zone\Quiz Zone\bin\roslyn\System.Console.dll
+C:\Users\jakub\Projects\WebProjects\Quiz Zone\Quiz Zone\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\jakub\Projects\WebProjects\Quiz Zone\Quiz Zone\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\jakub\Projects\WebProjects\Quiz Zone\Quiz Zone\bin\roslyn\System.IO.Compression.dll
+C:\Users\jakub\Projects\WebProjects\Quiz Zone\Quiz Zone\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\jakub\Projects\WebProjects\Quiz Zone\Quiz Zone\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\jakub\Projects\WebProjects\Quiz Zone\Quiz Zone\bin\roslyn\System.IO.Pipes.AccessControl.dll
+C:\Users\jakub\Projects\WebProjects\Quiz Zone\Quiz Zone\bin\roslyn\System.IO.Pipes.dll
+C:\Users\jakub\Projects\WebProjects\Quiz Zone\Quiz Zone\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\jakub\Projects\WebProjects\Quiz Zone\Quiz Zone\bin\roslyn\System.Security.AccessControl.dll
+C:\Users\jakub\Projects\WebProjects\Quiz Zone\Quiz Zone\bin\roslyn\System.Security.Claims.dll
+C:\Users\jakub\Projects\WebProjects\Quiz Zone\Quiz Zone\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\jakub\Projects\WebProjects\Quiz Zone\Quiz Zone\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\jakub\Projects\WebProjects\Quiz Zone\Quiz Zone\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\jakub\Projects\WebProjects\Quiz Zone\Quiz Zone\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\jakub\Projects\WebProjects\Quiz Zone\Quiz Zone\bin\roslyn\System.Security.Principal.Windows.dll
+C:\Users\jakub\Projects\WebProjects\Quiz Zone\Quiz Zone\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\jakub\Projects\WebProjects\Quiz Zone\Quiz Zone\bin\roslyn\System.ValueTuple.dll
+C:\Users\jakub\Projects\WebProjects\Quiz Zone\Quiz Zone\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\jakub\Projects\WebProjects\Quiz Zone\Quiz Zone\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\jakub\Projects\WebProjects\Quiz Zone\Quiz Zone\bin\roslyn\System.Xml.XPath.dll
+C:\Users\jakub\Projects\WebProjects\Quiz Zone\Quiz Zone\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\jakub\Projects\WebProjects\Quiz Zone\Quiz Zone\bin\roslyn\vbc.exe
+C:\Users\jakub\Projects\WebProjects\Quiz Zone\Quiz Zone\bin\roslyn\vbc.exe.config
+C:\Users\jakub\Projects\WebProjects\Quiz Zone\Quiz Zone\bin\roslyn\vbc.rsp
+C:\Users\jakub\Projects\WebProjects\Quiz Zone\Quiz Zone\bin\roslyn\VBCSCompiler.exe
+C:\Users\jakub\Projects\WebProjects\Quiz Zone\Quiz Zone\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\jakub\Projects\WebProjects\Quiz Zone\Quiz Zone\bin\EntityFramework.dll
+C:\Users\jakub\Projects\WebProjects\Quiz Zone\Quiz Zone\bin\EntityFramework.SqlServer.dll
+C:\Users\jakub\Projects\WebProjects\Quiz Zone\Quiz Zone\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\jakub\Projects\WebProjects\Quiz Zone\Quiz Zone\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\jakub\Projects\WebProjects\Quiz Zone\Quiz Zone\bin\Ninject.dll
+C:\Users\jakub\Projects\WebProjects\Quiz Zone\Quiz Zone\bin\Ninject.Web.Common.dll
+C:\Users\jakub\Projects\WebProjects\Quiz Zone\Quiz Zone\bin\Ninject.Web.Mvc.dll
+C:\Users\jakub\Projects\WebProjects\Quiz Zone\Quiz Zone\bin\System.Web.Helpers.dll
+C:\Users\jakub\Projects\WebProjects\Quiz Zone\Quiz Zone\bin\System.Web.Mvc.dll
+C:\Users\jakub\Projects\WebProjects\Quiz Zone\Quiz Zone\bin\System.Web.Razor.dll
+C:\Users\jakub\Projects\WebProjects\Quiz Zone\Quiz Zone\bin\System.Web.Webpages.Deployment.dll
+C:\Users\jakub\Projects\WebProjects\Quiz Zone\Quiz Zone\bin\System.Web.Webpages.dll
+C:\Users\jakub\Projects\WebProjects\Quiz Zone\Quiz Zone\bin\System.Web.Webpages.Razor.dll
+C:\Users\jakub\Projects\WebProjects\Quiz Zone\Quiz Zone\bin\EntityFramework.xml
+C:\Users\jakub\Projects\WebProjects\Quiz Zone\Quiz Zone\bin\EntityFramework.SqlServer.xml
+C:\Users\jakub\Projects\WebProjects\Quiz Zone\Quiz Zone\bin\Ninject.xml
+C:\Users\jakub\Projects\WebProjects\Quiz Zone\Quiz Zone\bin\Ninject.Web.Common.xml
+C:\Users\jakub\Projects\WebProjects\Quiz Zone\Quiz Zone\bin\Ninject.Web.Mvc.xml
+C:\Users\jakub\Projects\WebProjects\Quiz Zone\Quiz Zone\bin\System.Web.Razor.xml
+C:\Users\jakub\Projects\WebProjects\Quiz Zone\Quiz Zone\bin\System.Web.Webpages.xml
+C:\Users\jakub\Projects\WebProjects\Quiz Zone\Quiz Zone\bin\System.Web.Webpages.Deployment.xml
+C:\Users\jakub\Projects\WebProjects\Quiz Zone\Quiz Zone\bin\System.Web.Webpages.Razor.xml
+C:\Users\jakub\Projects\WebProjects\Quiz Zone\Quiz Zone\bin\System.Web.Helpers.xml
+C:\Users\jakub\Projects\WebProjects\Quiz Zone\Quiz Zone\bin\System.Web.Mvc.xml
+C:\Users\jakub\Projects\WebProjects\Quiz Zone\Quiz Zone\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\jakub\Projects\WebProjects\Quiz Zone\Quiz Zone\obj\Debug\Quiz Zone.csprojAssemblyReference.cache
+C:\Users\jakub\Projects\WebProjects\Quiz Zone\Quiz Zone\obj\Debug\Quiz Zone.csproj.CoreCompileInputs.cache
+C:\Users\jakub\Projects\WebProjects\Quiz Zone\Quiz Zone\obj\Debug\Quiz Zone.csproj.CopyComplete
+C:\Users\jakub\Projects\WebProjects\Quiz Zone\Quiz Zone\obj\Debug\Quiz Zone.dll
+C:\Users\jakub\Projects\WebProjects\Quiz Zone\Quiz Zone\obj\Debug\Quiz Zone.pdb
+C:\Users\jakub\Projects\WebProjects\Quiz Zone\Quiz Zone\bin\WebActivator.dll
+C:\Users\jakub\Projects\WebProjects\Quiz Zone\Quiz Zone\bin\Ninject.Web.Common.WebHost.dll
+C:\Users\jakub\Projects\WebProjects\Quiz Zone\Quiz Zone\bin\Ninject.Web.Common.WebHost.xml
