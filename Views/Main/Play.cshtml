@@ -1,5 +1,5 @@
 ﻿@using Quiz_Zone.Models
-@model List<Question>
+@model IEnumerable<Question>
 
 @{
     Layout = null;
@@ -39,13 +39,13 @@
                 document.getElementById("result").innerHTML = "Niepoprawna odpowiedź!";
             }
 
-            if (numOfQuestion < 1)
+            if (numOfQuestion < @Model.Count() - 1)
             {
-                setTimeout("generateQuestion(++numOfQuestion)", 2000);
+                setTimeout("generateQuestion(++numOfQuestion)", 1000);
             }
             else
             {
-                setTimeout("summary()", 2000);
+                setTimeout("summary()", 1000);
             }            
         }
 

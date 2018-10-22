@@ -10,6 +10,7 @@ namespace Quiz_Zone.Controllers
     public class MainController : Controller
     {
         private IQuestionRepository repository;
+        private readonly int numberOfRounds = 2;
 
         public MainController(IQuestionRepository repo)
         {
@@ -25,14 +26,19 @@ namespace Quiz_Zone.Controllers
 
         public ViewResult Play(string category)
         {
-            var random = new Random();
-            var questions = new List<Question>();
-            for (int i = 0; i < 2; i++)
-            {
-                var index = random.Next(0, 4);
-                questions.Add(repository.Questions.ElementAt(index));
-            }
+            var questions = TakeRandomQuestions(category);
             return View(questions);
+        }
+
+        private IEnumerable<Question> TakeRandomQuestions(string category)
+        {
+            var repo = repository.Questions.Where(x => x.Category == category);
+            var random = new Random();
+            for(int numOfQuestion = 1; numOfQuestion <= numberOfRounds; numOfQuestion++)
+            {
+                var index = random.Next(0, repo.Count());
+                yield return repo.ElementAt(index);
+            }
         }
     }
 }
