@@ -1,0 +1,49 @@
+﻿body 
+{
+    margin: 0;
+}
+
+aside
+{
+    width: 250px;
+    background-color: rgb(53, 64, 82);
+    height: 900px;
+    float: left;
+}
+
+#accountInfo
+{
+    height: 200px;
+    border-bottom: 3px solid rgb(42, 52, 67);
+}
+
+nav 
+{
+    margin: 20px 0px 20px 0px;
+    border-bottom: 3px solid rgb(42, 52, 67);
+}
+
+.option
+{
+    height: 42px;
+    font-size: 14px;
+    color: rgb(160, 172, 191);
+    font-family: Verdana;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.option:hover
+{
+    border-left: 4px solid rgb(11, 164, 250);
+    background-color: rgb(47, 57, 73);
+}
+
+.legend
+{
+    color: rgb(101, 116, 141);
+    font-family: Verdana;
+    font-weight: bold;
+    font-size: 13px;
+    padding: 8px;
+}

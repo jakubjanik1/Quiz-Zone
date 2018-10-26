@@ -2,7 +2,7 @@
 @model IEnumerable<Question>
 
 @{
-    Layout = null;
+    Layout = "~/Views/_Layout.cshtml";
 }
 
 <!DOCTYPE html>
@@ -12,7 +12,6 @@
 
 </head>
 <body>
-    <h1></h1>
     <h2 id="content"></h2>
     <h3 onclick="check('A')" id="answerA"></h3>
     <h3 onclick="check('B')" id="answerB"></h3>
@@ -61,8 +60,9 @@
 
         function summary()
         {
-            document.write("<h1>Twój wynik to: " + score + "</h1><h3>Gratulacje!</h3>");
+            @*document.write("<h1>Twój wynik to: " + score + "</h1><h3>Gratulacje!</h3>");
             document.write('@Html.ActionLink("Powrót do quizów", "Quizzes")');
+            document.write('@Html.ActionLink("Jeszcze raz", "Play", new { category = Model.ElementAt(0).Category })');*@
         }
     </script>
 </body>
