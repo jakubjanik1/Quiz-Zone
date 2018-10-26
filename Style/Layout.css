@@ -1,6 +1,7 @@
 ﻿body 
 {
     margin: 0;
+    font-family: Verdana;
 }
 
 aside
@@ -17,26 +18,51 @@ aside
     border-bottom: 3px solid rgb(42, 52, 67);
 }
 
+#accountInfo img
+{
+    width: 100px;
+    height: 100px;
+    margin: 32px 75px 15px 75px;
+    border-radius: 50%;
+}
+
+#accountName 
+{
+    font-size: 18px;
+    text-align: center;
+    color: rgb(160, 172, 191);
+}
+
 nav 
 {
-    margin: 20px 0px 20px 0px;
     border-bottom: 3px solid rgb(42, 52, 67);
+    padding: 25px 0px 25px 0px;
 }
 
 .option
 {
     height: 42px;
-    font-size: 14px;
+    font-size: 13px;
     color: rgb(160, 172, 191);
     font-family: Verdana;
     font-weight: bold;
     text-transform: uppercase;
+    line-height: 42px;
+    margin-left: 4px;
 }
 
 .option:hover
 {
     border-left: 4px solid rgb(11, 164, 250);
+    margin-left: 0px;
     background-color: rgb(47, 57, 73);
+    color: white;
+    cursor: pointer;
+}
+
+.option:hover i
+{
+    color: white;
 }
 
 .legend
@@ -45,5 +71,11 @@ nav
     font-family: Verdana;
     font-weight: bold;
     font-size: 13px;
-    padding: 8px;
+    padding-left: 25px;
+    padding-bottom: 5px;
+}
+
+a
+{
+    text-decoration: none;
 }

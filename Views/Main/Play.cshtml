@@ -5,65 +5,56 @@
     Layout = "~/Views/_Layout.cshtml";
 }
 
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Play</title>
+<h2 id="content"></h2>
+<h3 onclick="check('A')" id="answerA"></h3>
+<h3 onclick="check('B')" id="answerB"></h3>
+<h3 onclick="check('C')" id="answerC"></h3>
+<h3 onclick="check('D')" id="answerD"></h3>
+<h4 id="result"></h4>
+<script>
+    var rawJson = '@Html.Raw(Json.Encode(Model))';
+    var questions = JSON.parse(rawJson);
+    var numOfQuestion = 0;
+    var score = 0;
 
-</head>
-<body>
-    <h2 id="content"></h2>
-    <h3 onclick="check('A')" id="answerA"></h3>
-    <h3 onclick="check('B')" id="answerB"></h3>
-    <h3 onclick="check('C')" id="answerC"></h3>
-    <h3 onclick="check('D')" id="answerD"></h3>
-    <h4 id="result"></h4>
-    <script>
-        var rawJson = '@Html.Raw(Json.Encode(Model))';
-        var questions = JSON.parse(rawJson);
-        var numOfQuestion = 0;
-        var score = 0;
+    generateQuestion(numOfQuestion);
 
-        generateQuestion(numOfQuestion);
-
-        function check(myAnswer)
+    function check(myAnswer)
+    {
+        if (myAnswer == questions[numOfQuestion].GoodAnswer)
         {
-            if (myAnswer == questions[numOfQuestion].GoodAnswer)
-            {
-                score++;
-                document.getElementById("result").innerHTML = "Poprawna odpowiedź!";
-            }
-            else
-            {
-                document.getElementById("result").innerHTML = "Niepoprawna odpowiedź!";
-            }
-
-            if (numOfQuestion < @Model.Count() - 1)
-            {
-                setTimeout("generateQuestion(++numOfQuestion)", 1000);
-            }
-            else
-            {
-                setTimeout("summary()", 1000);
-            }            
+            score++;
+            document.getElementById("result").innerHTML = "Poprawna odpowiedź!";
+        }
+        else
+        {
+            document.getElementById("result").innerHTML = "Niepoprawna odpowiedź!";
         }
 
-        function generateQuestion(index)
+        if (numOfQuestion < @Model.Count() - 1)
         {
-            document.getElementById("content").innerHTML = questions[index].Content;
-            document.getElementById("answerA").innerHTML = questions[index].AnswerA;
-            document.getElementById("answerB").innerHTML = questions[index].AnswerB;
-            document.getElementById("answerC").innerHTML = questions[index].AnswerC;
-            document.getElementById("answerD").innerHTML = questions[index].AnswerD; 
-            document.getElementById("result").innerHTML = "";
+            setTimeout("generateQuestion(++numOfQuestion)", 1000);
         }
+        else
+        {
+            setTimeout("summary()", 1000);
+        }            
+    }
 
-        function summary()
-        {
-            @*document.write("<h1>Twój wynik to: " + score + "</h1><h3>Gratulacje!</h3>");
-            document.write('@Html.ActionLink("Powrót do quizów", "Quizzes")');
-            document.write('@Html.ActionLink("Jeszcze raz", "Play", new { category = Model.ElementAt(0).Category })');*@
-        }
-    </script>
-</body>
-</html>
+    function generateQuestion(index)
+    {
+        document.getElementById("content").innerHTML = questions[index].Content;
+        document.getElementById("answerA").innerHTML = questions[index].AnswerA;
+        document.getElementById("answerB").innerHTML = questions[index].AnswerB;
+        document.getElementById("answerC").innerHTML = questions[index].AnswerC;
+        document.getElementById("answerD").innerHTML = questions[index].AnswerD; 
+        document.getElementById("result").innerHTML = "";
+    }
+
+    function summary()
+    {
+        @*document.write("<h1>Twój wynik to: " + score + "</h1><h3>Gratulacje!</h3>");
+        document.write('@Html.ActionLink("Powrót do quizów", "Quizzes")');
+        document.write('@Html.ActionLink("Jeszcze raz", "Play", new { category = Model.ElementAt(0).Category })');*@
+    }
+</script>

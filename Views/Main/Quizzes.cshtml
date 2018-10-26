@@ -2,7 +2,7 @@
 @model IEnumerable<string>
 
 @{
-    Layout = null;
+    Layout = "~/Views/_Layout.cshtml";
 }
 
 <!DOCTYPE html>
@@ -11,7 +11,7 @@
     <title>Quizzes</title>
 </head>
 <body>
-    @foreach(var category in Model)
+    @foreach (var category in Model)
     {
         @Html.ActionLink(category, "Play", new { category = category })
     }

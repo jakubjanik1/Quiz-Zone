@@ -110,7 +110,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Font\fontello.svg" />
     <Content Include="Global.asax" />
+    <Content Include="Style\Fontello\fontello.css" />
     <Content Include="Style\Layout.css" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
@@ -132,6 +134,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\web.config" />
+    <Content Include="Font\fontello.eot" />
+    <Content Include="Font\fontello.ttf" />
+    <Content Include="Font\fontello.woff" />
+    <Content Include="Font\fontello.woff2" />
     <None Include="packages.config" />
     <Content Include="Views\Main\Quizzes.cshtml" />
     <Content Include="Views\Main\Play.cshtml" />

@@ -2,18 +2,37 @@
 <html>
 <head>
     <link rel="stylesheet" href="~/Style/Layout.css" />
+    <link rel="stylesheet" href="~/Style/Fontello/fontello.css" />
 </head>
 <body>
     <aside>
         <div id="accountInfo">
-
+            <img src="~/person.png" />
+            <div id="accountName">Jakub Janik</div>
         </div>
         <nav>
             <div class="legend">Main</div>
-            <div class="option">Home</div>
-            <div class="option">Quizzes</div>
-            <div class="option">Ranking</div>
-            <div class="option">Information</div>
+            <div class="option">
+                <i class="icon-home"></i> Start
+            </div>
+            <a href="Quizzes"><div class="option">
+                <i class="icon-quizzes"></i> Quizy
+            </div></a>
+            <div class="option">
+                <i class="icon-ranking"></i> Ranking
+            </div>
+            <div class="option">
+                <i class="icon-info"></i> Informacje
+            </div>
+        </nav>
+        <nav>
+            <div class="legend">Admin</div>
+            <div class="option">
+                <i class="icon-users"></i> Użytkownicy
+            </div>
+            <div class="option">
+                <i class="icon-edit-questions"></i> Pytania
+            </div>
         </nav>
     </aside>
     <div style="float: left;">
