@@ -70,7 +70,7 @@
     color: rgb(160, 172, 191);
     padding-left: 20px;
     padding-right: 5px;
-    font-size: 18px;
+    font-size: 17px;
 }
 /* '' */
 .icon-info:before 
@@ -80,6 +80,7 @@
     padding-left: 20px;
     padding-right: 5px;
     font-size: 18px;
+    display: block;
 }
 /* '' */
 .icon-quizzes:before 
@@ -106,6 +107,6 @@
     color: rgb(160, 172, 191);
     padding-left: 20px;
     padding-right: 5px;
-    font-size: 18px;
+    font-size: 17px;
 }
 /* '' */

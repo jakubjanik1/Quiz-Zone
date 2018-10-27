@@ -1,42 +1,52 @@
 ﻿<!DOCTYPE html>
-<html>
+<html lang="pl">
 <head>
     <link rel="stylesheet" href="~/Style/Layout.css" />
     <link rel="stylesheet" href="~/Style/Fontello/fontello.css" />
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,900" rel="stylesheet">    
+    <title>Quiz Zone</title>
 </head>
 <body>
     <aside>
         <div id="accountInfo">
-            <img src="~/person.png" />
+            <img src="~/person.png" alt="profile" />
             <div id="accountName">Jakub Janik</div>
         </div>
         <nav>
             <div class="legend">Main</div>
             <div class="option">
-                <i class="icon-home"></i> Start
+                <i class="icon-home"></i>
+                <div class="optionContent" style="line-height: 44px;">Start</div>
             </div>
-            <a href="Quizzes"><div class="option">
-                <i class="icon-quizzes"></i> Quizy
-            </div></a>
+            <a href="Quizzes">
+                <div class="option">
+                    <i class="icon-quizzes"></i>
+                    <div class="optionContent">Quizy</div>
+                </div>
+            </a>
             <div class="option">
-                <i class="icon-ranking"></i> Ranking
+                <i class="icon-ranking"></i>
+                <div class="optionContent">Ranking</div>
             </div>
             <div class="option">
-                <i class="icon-info"></i> Informacje
+                <i class="icon-info"></i>
+                <div class="optionContent">Informacje</div>
             </div>
         </nav>
         <nav>
             <div class="legend">Admin</div>
             <div class="option">
-                <i class="icon-users"></i> Użytkownicy
+                <i class="icon-users"></i>
+                <div class="optionContent" style="line-height: 44px;">Użytkownicy</div>
             </div>
             <div class="option">
-                <i class="icon-edit-questions"></i> Pytania
+                <i class="icon-edit-questions"></i>
+                <div class="optionContent">Pytania</div>
             </div>
         </nav>
     </aside>
-    <div style="float: left;">
+    <main>
         @RenderBody()
-    </div>
+    </main>
 </body>
 </html>
