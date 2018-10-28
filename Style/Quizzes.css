@@ -1,0 +1,35 @@
+﻿.tile 
+{
+    background-color: white;
+    width: 200px;
+    height: 250px;
+    border-radius: 5px;
+    -webkit-box-shadow: 3px 3px 35px -6px rgba(0,0,0,0.75);
+    -moz-box-shadow: 3px 3px 35px -6px rgba(0,0,0,0.75);
+    box-shadow: 3px 3px 35px -6px rgba(0,0,0,0.75);
+    text-align: center;
+    color: rgb(101, 116, 141);
+    font-weight: 900;
+    
+}
+
+.tile:hover img 
+{
+    transform: scale(0.5) translateY(-50px);
+    margin: 17px 17px 12px 17px;
+}
+
+.tile img
+{
+    width: 130px;
+    margin: 35px 35px 25px 35px;
+    transition: transform 0.3s ease-in-out;
+}
+
+#grid
+{
+    display: grid;
+    grid-template-columns: 200px 200px 200px;
+    grid-gap: 25px;
+    margin: 25px;
+}

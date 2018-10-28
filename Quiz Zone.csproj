@@ -114,6 +114,7 @@
     <Content Include="Global.asax" />
     <Content Include="Style\Fontello\fontello.css" />
     <Content Include="Style\Layout.css" />
+    <Content Include="Style\Quizzes.css" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>

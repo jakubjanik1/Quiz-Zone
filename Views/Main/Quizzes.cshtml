@@ -5,15 +5,14 @@
     Layout = "~/Views/_Layout.cshtml";
 }
 
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Quizzes</title>
-</head>
-<body>
+<div id="grid">
     @foreach (var category in Model)
     {
-        @Html.ActionLink(category, "Play", new { category = category })
+        <a href="@Url.Action("Play", new { category = category})">
+            <div class="tile">
+                <img src="film.png" alt="film" />
+                @category
+            </div>
+        </a>
     }
-</body>
-</html>
+</div>

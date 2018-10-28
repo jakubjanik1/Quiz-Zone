@@ -2,6 +2,7 @@
 {
     margin: 0;
     font-family: 'Lato', sans-serif;
+    width: auto;
 }
 
 aside
@@ -88,9 +89,8 @@ a
 main
 {
     background-color: rgb(235, 241, 245);
-    float: left;
-    width: 1653px;
-    height: 938px;
+    overflow: hidden;
+    height: 938px;   
 }
 
 .optionContent
