@@ -8,11 +8,13 @@
 <div id="grid">
     @foreach (var category in Model)
     {
-        <a href="@Url.Action("Play", new { category = category})">
-            <div class="tile">
-                <img src="film.png" alt="film" />
-                @category
-            </div>
-        </a>
+        <div class="tile">
+            <img src="film.png" alt="film" />
+            <div class="name">@category</div>
+            <div class="description">Quiz poświęcony piłce nożnej. Pytania dotyczą klubowej oraz reprezentacjyjnej piłki</div>
+            <a href="@Url.Action("Play", new { category = category})">
+                <div class="playButton">Graj</div>
+            </a>
+        </div>
     }
 </div>

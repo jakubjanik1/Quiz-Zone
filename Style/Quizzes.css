@@ -7,23 +7,26 @@
     -webkit-box-shadow: 3px 3px 35px -6px rgba(0,0,0,0.75);
     -moz-box-shadow: 3px 3px 35px -6px rgba(0,0,0,0.75);
     box-shadow: 3px 3px 35px -6px rgba(0,0,0,0.75);
-    text-align: center;
-    color: rgb(101, 116, 141);
-    font-weight: 900;
-    
+    text-align: center;  
+    position: relative;
 }
 
-.tile:hover img 
+.tile:hover
 {
-    transform: scale(0.5) translateY(-50px);
-    margin: 17px 17px 12px 17px;
+    cursor: pointer;
 }
 
 .tile img
 {
     width: 130px;
     margin: 35px 35px 25px 35px;
-    transition: transform 0.3s ease-in-out;
+    transition: transform 0.5s ease-in-out;
+}
+
+.tile:hover img
+{
+    transform: scale(0.5) translateY(-80px);
+    margin: 17px 17px 12px 17px;
 }
 
 #grid
@@ -32,4 +35,59 @@
     grid-template-columns: 200px 200px 200px;
     grid-gap: 25px;
     margin: 25px;
+}
+
+.tile:hover .name
+{
+    transform: translateY(-80px);
+}
+
+.name 
+{
+    transition: transform 0.5s ease-in-out;
+    color: rgb(101, 116, 141);
+    font-weight: 900;
+}
+
+.description 
+{
+    font-size: 14px;
+    color: rgb(160, 172, 191);
+    padding: 8px;
+    opacity: 0;
+    transition: transform 0.5s ease-in-out;
+}
+
+.tile:hover .description
+{
+    opacity: 1;
+    transform: translateY(-65px);
+}
+
+.playButton 
+{
+    opacity: 0;
+    background-color: rgb(11, 164, 250);
+    border: 0;
+    border-radius: 5px;
+    font-size: 17px;
+    width: 60px;
+    height: 25px;
+    font-weight: 900;
+    color: white;
+    transition: 0.5s;
+    position: absolute;
+    left: 70px;
+    bottom: 15px;
+}
+
+.playButton:hover 
+{
+    cursor: pointer;
+    background-color: rgb(11, 140, 250);
+}
+
+.tile:hover .playButton
+{
+    opacity: 1;
 }
