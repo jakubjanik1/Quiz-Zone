@@ -30,7 +30,7 @@ namespace Quiz_Zone.Infrastructure
 
         private void AddBindings()
         {
-            kernel.Bind<IQuestionRepository>().To<EFQuestionRepository>();
+            kernel.Bind<IQuizRepository>().To<DbQuizRepository>();
         }   
     }
 }

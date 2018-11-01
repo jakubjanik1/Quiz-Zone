@@ -9,19 +9,17 @@ namespace Quiz_Zone.Controllers
 {
     public class MainController : Controller
     {
-        private IQuestionRepository repository;
+        private IQuizRepository repository;
         private readonly int numberOfRounds = 2;
 
-        public MainController(IQuestionRepository repo)
+        public MainController(IQuizRepository repo)
         {
             repository = repo;            
         }
 
         public ViewResult Quizzes()
         {
-            return View(repository.Questions
-                .Select(x => x.Category)
-                .Distinct());
+            return View(repository.Categories);
         }
 
         public ViewResult Play(string category)
@@ -32,7 +30,7 @@ namespace Quiz_Zone.Controllers
 
         private IEnumerable<Question> TakeRandomQuestions(string category)
         {
-            var repo = repository.Questions.Where(x => x.Category == category);
+            var repo = repository.Questions.Where(x => x.Category.Name == category);
             var random = new Random();
             for(int numOfQuestion = 1; numOfQuestion <= numberOfRounds; numOfQuestion++)
             {

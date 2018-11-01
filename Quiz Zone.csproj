@@ -123,15 +123,16 @@
     <Compile Include="App_Start\NinjectWebCommon.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\MainController.cs" />
+    <Compile Include="DAL\QuizDbContext.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Infrastructure\NinjectDependencyResolver.cs" />
+    <Compile Include="Models\Category.cs" />
     <Compile Include="Models\Question.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Repository\EFDbContext.cs" />
-    <Compile Include="Repository\EFQuestionRepository.cs" />
-    <Compile Include="Repository\IQuestionRepository.cs" />
+    <Compile Include="Repository\DbQuizRepository.cs" />
+    <Compile Include="Repository\IQuizRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\web.config" />
