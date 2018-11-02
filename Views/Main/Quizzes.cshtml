@@ -12,7 +12,7 @@
             <img src="film.png" alt="film" />
             <div class="name">@category.Name</div>
             <div class="description">@category.Description</div>
-            <a href="@Url.Action("Play", new { category = category.Name})">
+            <a href="@Url.Action("Play", new { categoryName = category.Name})">
                 <div class="playButton">Graj</div>
             </a>
         </div>

@@ -1,4 +1,12 @@
-﻿.tile 
+﻿#grid 
+{
+    display: grid;
+    grid-template-columns: 200px 200px 200px;
+    grid-gap: 25px;
+    margin: 25px;
+}
+
+.tile 
 {
     background-color: white;
     width: 200px;
@@ -27,14 +35,6 @@
 {
     transform: scale(0.5) translateY(-80px);
     margin: 17px 17px 12px 17px;
-}
-
-#grid
-{
-    display: grid;
-    grid-template-columns: 200px 200px 200px;
-    grid-gap: 25px;
-    margin: 25px;
 }
 
 .tile:hover .name

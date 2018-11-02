@@ -1,8 +1,14 @@
 ﻿body 
 {
-    margin: 0;
+    /*SMALL EDITION*/
+    width: 1300px;
+    background-color: rgb(42, 77, 94);
+    margin-left: auto;
+    margin-right: auto;
+
+    /*width: auto;*/
     font-family: 'Lato', sans-serif;
-    width: auto;
+    margin-top: 0;
 }
 
 aside
@@ -37,7 +43,7 @@ aside
 nav 
 {
     border-bottom: 3px solid rgb(42, 52, 67);
-    padding: 25px 0px 25px 0px;
+    padding: 25px 0 25px 0;
 }
 
 .option
@@ -61,7 +67,7 @@ nav
 .option:hover
 {
     border-left: 4px solid rgb(11, 164, 250);
-    margin-left: 0px;
+    margin-left: 0;
     background-color: rgb(47, 57, 73);
     color: white;
     cursor: pointer;

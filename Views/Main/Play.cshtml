@@ -5,12 +5,24 @@
     Layout = "~/Views/_Layout.cshtml";
 }
 
-<h2 id="content"></h2>
-<h3 onclick="check('A')" id="answerA"></h3>
-<h3 onclick="check('B')" id="answerB"></h3>
-<h3 onclick="check('C')" id="answerC"></h3>
-<h3 onclick="check('D')" id="answerD"></h3>
-<h4 id="result"></h4>
+<div id="content"></div>
+<div id="numOfQuestion"></div>
+<div id="answerGrid">
+    <div onclick="check('A')" class="answer">
+        <div class="icon">A</div>
+        <div id="answerA"></div>
+    </div>
+    <div onclick="check('B')" class="answer">
+        <div class="icon">B</div>
+    </div>
+    <div onclick="check('C')" class="answer">
+        <div class="icon">C</div>
+    </div>
+    <div onclick="check('D')" class="answer">
+        <div class="icon">D</div>
+    </div>
+</div>
+<div id="result"></div>
 <script>
     var rawJson = '@Html.Raw(Json.Encode(Model))';
     var questions = JSON.parse(rawJson);
@@ -44,6 +56,7 @@
     function generateQuestion(index)
     {
         document.getElementById("content").innerHTML = questions[index].Content;
+        document.getElementById("numOfQuestion").innerHTML = "PYTANIE " + (numOfQuestion+1) + " Z " + @Model.Count();
         document.getElementById("answerA").innerHTML = questions[index].AnswerA;
         document.getElementById("answerB").innerHTML = questions[index].AnswerB;
         document.getElementById("answerC").innerHTML = questions[index].AnswerC;

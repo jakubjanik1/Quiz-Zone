@@ -22,15 +22,15 @@ namespace Quiz_Zone.Controllers
             return View(repository.Categories);
         }
 
-        public ViewResult Play(string category)
+        public ViewResult Play(string categoryName)
         {
-            var questions = TakeRandomQuestions(category);
+            var questions = TakeRandomQuestions(categoryName);
             return View(questions);
         }
 
-        private IEnumerable<Question> TakeRandomQuestions(string category)
+        private IEnumerable<Question> TakeRandomQuestions(string categoryName)
         {
-            var repo = repository.Questions.Where(x => x.Category.Name == category);
+            var repo = repository.Questions.Where(x => x.Category.Name == categoryName);
             var random = new Random();
             for(int numOfQuestion = 1; numOfQuestion <= numberOfRounds; numOfQuestion++)
             {
