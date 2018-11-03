@@ -10,19 +10,23 @@
 <div id="answerGrid">
     <div onclick="check('A')" class="answer">
         <div class="icon">A</div>
-        <div id="answerA"></div>
+        <div id="answerA" class="answerContent"></div>
     </div>
     <div onclick="check('B')" class="answer">
         <div class="icon">B</div>
+        <div id="answerB" class="answerContent"></div>
     </div>
     <div onclick="check('C')" class="answer">
         <div class="icon">C</div>
+        <div id="answerC" class="answerContent"></div>
     </div>
     <div onclick="check('D')" class="answer">
         <div class="icon">D</div>
+        <div id="answerD" class="answerContent"></div>
     </div>
 </div>
 <div id="result"></div>
+<div id="score">Twój wynik:<br><span id="scoreNum">0</span></div>
 <script>
     var rawJson = '@Html.Raw(Json.Encode(Model))';
     var questions = JSON.parse(rawJson);
@@ -36,11 +40,12 @@
         if (myAnswer == questions[numOfQuestion].GoodAnswer)
         {
             score++;
-            document.getElementById("result").innerHTML = "Poprawna odpowiedź!";
+            document.getElementById("result").innerHTML = "Poprawna odpowiedź!!!";
+            document.getElementById("scoreNum").innerHTML = score;
         }
         else
         {
-            document.getElementById("result").innerHTML = "Niepoprawna odpowiedź!";
+            document.getElementById("result").innerHTML = "Niepoprawna odpowiedź!!!";
         }
 
         if (numOfQuestion < @Model.Count() - 1)
@@ -61,7 +66,7 @@
         document.getElementById("answerB").innerHTML = questions[index].AnswerB;
         document.getElementById("answerC").innerHTML = questions[index].AnswerC;
         document.getElementById("answerD").innerHTML = questions[index].AnswerD; 
-        document.getElementById("result").innerHTML = "";
+        document.getElementById("result").innerHTML = "";       
     }
 
     function summary()
