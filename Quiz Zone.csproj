@@ -116,6 +116,7 @@
     <Content Include="Style\Layout.css" />
     <Content Include="Style\Play.css" />
     <Content Include="Style\Quizzes.css" />
+    <Content Include="Style\Summary.css" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -145,6 +146,7 @@
     <Content Include="Views\Main\Quizzes.cshtml" />
     <Content Include="Views\Main\Play.cshtml" />
     <Content Include="Views\_Layout.cshtml" />
+    <Content Include="Views\Summary.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
