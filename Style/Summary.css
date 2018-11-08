@@ -1,1 +1,101 @@
-﻿
+﻿#summaryTitle 
+{
+    font-size: 34px;
+    font-weight: 400;
+    margin: 50px 100px 5px 100px;
+    color: rgb(101, 116, 141);
+}
+
+#summaryCategory 
+{
+    color: rgb(11, 164, 250);
+    margin: 0 100px 0 100px;
+    font-weight: 900;
+}
+
+#wrapper 
+{
+    margin: 40px 99px 60px 99px;
+    height: 420px;
+    border-radius: 10px;
+    background-color: white;
+    color: black;
+    border: 1px solid rgb(160, 172, 191);
+}
+
+.label 
+{
+    width: 275px;
+    float: left;
+    color: rgb(101, 116, 141);
+    margin: 136px 0 135px 0;
+    font-size: 34px;
+    text-align: center;
+}
+
+.number 
+{
+    display: block;
+    font-size: 90px;
+    font-weight: 900;
+    color: rgb(11, 164, 250);
+}
+
+.button
+{
+    width: 250px;
+    background-color: rgb(160, 172, 191);
+    font-size: 25px;
+    color: white;
+    float: left;
+    padding: 25px;
+    border-radius: 10px;
+    text-align: center;
+    font-weight: 900;
+    letter-spacing: 1px;
+}
+
+.button:hover 
+{
+    cursor: pointer;
+    background-color: rgb(139, 150, 166);
+}
+
+a:first-of-type .button
+{
+    margin-left: 200px;
+}
+
+a:last-of-type .button
+{
+    margin-left: 100px;
+}
+
+
+/*-----------CIRCLE RING WITH PERCENT----------------*/
+
+.circular-chart 
+{
+    display: block;
+    float: left;
+    margin: 35px 0 35px 0;
+    max-width: 80%;
+    max-height: 350px;
+    width: 350px;
+}
+
+.circle 
+{
+    fill: none;
+    stroke-width: 4;
+    stroke-linecap: round;
+    stroke-dasharray: 75, 100;
+    stroke: rgb(11, 164, 250);
+}
+
+.percentage 
+{
+    fill: rgb(101, 116, 141);
+    font-size: 0.5em;
+    text-anchor: middle;
+}

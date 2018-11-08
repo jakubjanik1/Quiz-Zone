@@ -10,7 +10,7 @@ namespace Quiz_Zone.Controllers
     public class MainController : Controller
     {
         private IQuizRepository repository;
-        private readonly int numberOfRounds = 2;
+        private readonly int numberOfRounds = 1;
 
         public MainController(IQuizRepository repo)
         {
