@@ -38,5 +38,61 @@ namespace Quiz_Zone.Repository
             }
             context.SaveChanges();
         }
+
+
+        public void DeleteCategory(int categoryId)
+        {
+            var questionsToRemove = context.Questions.Where(q => q.CategoryID == categoryId);
+            foreach(var question in questionsToRemove)
+            {
+                DeleteQuestionEntry(question.QuestionID);
+            }
+
+            var dbEntry = context.Categories.Find(categoryId);
+            if (dbEntry != null)
+            {
+                context.Categories.Remove(dbEntry);
+                context.SaveChanges();
+            }
+        }
+
+        public void SaveQuestion(Question question)
+        {
+            if (question.QuestionID == 0)
+            {
+                context.Questions.Add(question);
+            }
+            else
+            {
+                var dbEntry = context.Questions.Find(question.QuestionID);
+                if (dbEntry != null)
+                {
+                    dbEntry.Content = question.Content;
+                    dbEntry.AnswerA = question.AnswerA;
+                    dbEntry.AnswerB = question.AnswerB;
+                    dbEntry.AnswerC = question.AnswerC;
+                    dbEntry.AnswerD = question.AnswerD;
+                    dbEntry.GoodAnswer = question.GoodAnswer;
+                }
+            }
+            context.SaveChanges();
+        }
+
+        public Question DeleteQuestion(int questionId)
+        {
+            var dbEntry = DeleteQuestionEntry(questionId);
+            context.SaveChanges();
+            return dbEntry;
+        }
+
+        private Question DeleteQuestionEntry(int questionId)
+        {
+            var dbEntry = context.Questions.Find(questionId);
+            if (dbEntry != null)
+            {
+                context.Questions.Remove(dbEntry);
+            }
+            return dbEntry;
+        }
     }
 }

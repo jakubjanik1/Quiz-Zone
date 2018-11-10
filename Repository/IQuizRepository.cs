@@ -10,5 +10,11 @@ namespace Quiz_Zone.Repository
         IEnumerable<Category> Categories { get; }
 
         void SaveCategory(Category category);
+
+        void DeleteCategory(int categoryId);
+
+        void SaveQuestion(Question question);
+
+        Question DeleteQuestion(int questionId);
     }
 }

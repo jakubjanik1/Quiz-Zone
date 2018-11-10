@@ -1,0 +1,32 @@
+﻿@model IEnumerable<Quiz_Zone.Models.Question>
+
+@{
+    Layout = "~/Views/_Layout.cshtml";
+}
+
+<div class="form">
+    <div class="title">Pytania - </div>
+    <table>
+        <thead>
+            <tr>
+                <th>Treść</th>
+                <th>Akcje</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var question in Model)
+            {
+                <tr>
+                    <td>@question.Content</td>
+                    <td>
+                        @Html.ActionLink("Edytuj", "EditQuestion", new { questionId = question.QuestionID }, new { @class = "action" })
+                        @Html.ActionLink("Usuń", "DeleteQuestion", new { questionId = question.QuestionID }, new { @class = "action" })
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+    @Html.ActionLink("Dodaj pytanie", "CreateQuestion", new { categoryId = ViewBag.CategoryId }, new { @class = "editAction" })
+    @Html.ActionLink("Powrót do kategorii", "Categories", null, new { @class = "editAction" })
+</div>

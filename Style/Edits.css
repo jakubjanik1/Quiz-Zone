@@ -5,7 +5,7 @@
     border-radius: 10px;
     color: rgb(101, 116, 141);
     padding: 20px;
-    width: 900px;
+    width: 860px;
     font-size: 17px;
 }
 
@@ -61,8 +61,14 @@ input.editAction
     margin-left: 150px;
 }
 
-a.editAction
+a.editAction:last-child
 {
     padding: 20px;
     margin-left: 100px;
+}
+
+a.editAction:not(:last-child)
+{
+    padding: 20px;
+    margin-left: 150px;
 }

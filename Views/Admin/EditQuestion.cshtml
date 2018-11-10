@@ -1,0 +1,35 @@
+﻿@using Quiz_Zone.Models
+@model Question
+
+@{
+    Layout = "~/Views/_Layout.cshtml";
+}
+
+<div class="form">
+    <div class="title">Pytanie</div>
+
+    @using (Html.BeginForm("EditQuestion", "Admin"))
+    {
+        @Html.HiddenFor(q => q.QuestionID)
+        @Html.HiddenFor(q => q.CategoryID)
+        foreach (var property in ViewData.ModelMetadata.Properties)
+        {
+            switch (property.PropertyName)
+            {
+                case "QuestionID":
+                case "Category":
+                case "CategoryID":
+                    break;
+
+                default:
+                    <label>@(property.DisplayName ?? property.PropertyName)</label>
+                    @Html.TextBox(property.PropertyName, null, new { @class = "textBox" })
+                    break;
+            }
+            @Html.ValidationMessage(property.PropertyName)
+        }
+        <input type="submit" value="Zapisz" class="editAction">
+        @Html.ActionLink("Anuluj", "Questions", new { categoryId = Model.CategoryID }, new { @class = "editAction" })
+    }
+</div>
+

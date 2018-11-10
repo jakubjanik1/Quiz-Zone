@@ -5,9 +5,9 @@
     Layout = "~/Views/_Layout.cshtml";
 }
 
-<div class="title">@(Model.Name ?? "Kategoria")</div>
-
 <div class="form">
+    <div class="title">@(Model.Name ?? "Kategoria")</div>
+
     @using (Html.BeginForm("EditCategory", "Admin", FormMethod.Post, new { enctype = "multipart/form-data" }))
     {
         @Html.HiddenFor(c => c.CategoryID)

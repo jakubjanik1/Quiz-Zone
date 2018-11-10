@@ -1,5 +1,6 @@
 ﻿using Quiz_Zone.Models;
 using Quiz_Zone.Repository;
+using System.Collections.Generic;
 using System.Linq;
 using System.Web.Mvc;
 
@@ -37,6 +38,55 @@ namespace Quiz_Zone.Controllers
             {
                 return View(category);
             }
+        }
+
+        public ViewResult CreateCategory()
+        {
+            return View("EditCategory", new Category());
+        }
+
+        public ActionResult DeleteCategory(int categoryId)
+        {
+            repository.DeleteCategory(categoryId);
+            return RedirectToAction("Categories");
+        }
+
+        public ViewResult Questions(int categoryId)
+        {
+            
+            ViewBag.CategoryId = categoryId;
+            return View( repository.Questions.Where(q => q.CategoryID == categoryId) );
+        }
+
+        public ViewResult EditQuestion(int questionId)
+        {
+            var question = repository.Questions.FirstOrDefault(q => q.QuestionID == questionId);
+            return View(question);
+        }
+
+        [HttpPost]
+        public ActionResult EditQuestion(Question question)
+        {
+            if (ModelState.IsValid)
+            {
+                repository.SaveQuestion(question);
+                return RedirectToAction("Questions", new { categoryId = question.CategoryID });
+            }
+            else
+            {
+                return View(question);
+            }
+        }
+
+        public ViewResult CreateQuestion(int categoryId)
+        {
+            return View("EditQuestion", new Question() { CategoryID = categoryId });
+        }
+
+        public ActionResult DeleteQuestion(int questionId)
+        {
+            var question = repository.DeleteQuestion(questionId);
+            return RedirectToAction("Questions", new { categoryId = question.CategoryID });
         }
     }
 }

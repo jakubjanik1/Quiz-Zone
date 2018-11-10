@@ -112,7 +112,7 @@
   <ItemGroup>
     <Content Include="Font\fontello.svg" />
     <Content Include="Global.asax" />
-    <Content Include="Style\Categories.css" />
+    <Content Include="Style\Lists.css" />
     <Content Include="Style\Edits.css" />
     <Content Include="Style\Fontello\fontello.css" />
     <Content Include="Style\Layout.css" />
@@ -152,6 +152,8 @@
     <Content Include="Views\_Layout.cshtml" />
     <Content Include="Views\Admin\EditCategory.cshtml" />
     <Content Include="Views\Admin\Categories.cshtml" />
+    <Content Include="Views\Admin\Questions.cshtml" />
+    <Content Include="Views\Admin\EditQuestion.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

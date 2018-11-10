@@ -4,26 +4,31 @@
     Layout = "~/Views/_Layout.cshtml";
 }
 
-<div class="title">Kategorie</div>
-<table>
-    <thead>
-        <tr>
-            <th>Nazwa</th>
-            <th>Opis</th>
-            <th>Akcje</th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var category in Model)
-        {
+<div class="form">
+    <div class="title">Kategorie</div>
+    <table>
+        <thead>
             <tr>
-                <td>@category.Name</td>
-                <td>@category.Description</td>
-                <td>
-                    @Html.ActionLink("Edytuj", "EditCategory", new { categoryId = category.CategoryID }, new { @class = "action" })
-                    @Html.ActionLink("Usuń", "Delete", new { categoryId = category.CategoryID }, new { @class = "action" })
-                </td>
+                <th>Nazwa</th>
+                <th>Opis</th>
+                <th>Akcje</th>
             </tr>
-        }
-    </tbody>
-</table>
+        </thead>
+        <tbody>
+            @foreach (var category in Model)
+            {
+                <tr>
+                    <td>@category.Name</td>
+                    <td>@category.Description</td>
+                    <td>
+                        @Html.ActionLink("Edytuj", "EditCategory", new { categoryId = category.CategoryID }, new { @class = "action" })
+                        @Html.ActionLink("Usuń", "DeleteCategory", new { categoryId = category.CategoryID }, new { @class = "action" })
+                        @Html.ActionLink("Pytania", "Questions", new { categoryId = category.CategoryID }, new { @class = "action" })
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+    @Html.ActionLink("Dodaj kategorię", "CreateCategory", null, new { @class = "editAction", style = "margin-left: 325px;" })
+</div>
