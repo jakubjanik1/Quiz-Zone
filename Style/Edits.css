@@ -1,0 +1,68 @@
+﻿.textBox 
+{
+    display: block;
+    border: 1px solid rgb(160, 172, 191);
+    border-radius: 10px;
+    color: rgb(101, 116, 141);
+    padding: 20px;
+    width: 900px;
+    font-size: 17px;
+}
+
+.textBox:focus 
+{
+    outline: none;
+}
+
+input:focus
+{
+    outline: none;
+}
+
+.form 
+{
+    margin: 0 99px 0 99px;
+}
+
+label 
+{
+    display: block;
+    color: rgb(101, 116, 141);
+    font-weight: 900;
+    margin-top: 20px;
+    margin-bottom: 5px;
+}
+
+a.editAction, input.editAction 
+{
+    display: inline-block;
+    background-color: rgb(11, 164, 250);
+    color: white;
+    font-weight: 900;
+    font-size: 18px;
+    letter-spacing: 1px;
+    padding: 18px;
+    border-radius: 10px;
+    margin-top: 40px;
+    border: 0;
+    width: 250px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+a.editAction:hover, input.editAction:hover 
+{
+    cursor: pointer;
+    background-color: rgb(11, 140, 250);
+}
+
+input.editAction
+{
+    margin-left: 150px;
+}
+
+a.editAction
+{
+    padding: 20px;
+    margin-left: 100px;
+}

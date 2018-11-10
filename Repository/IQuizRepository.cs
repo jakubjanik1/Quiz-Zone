@@ -8,5 +8,7 @@ namespace Quiz_Zone.Repository
         IEnumerable<Question> Questions { get; }
 
         IEnumerable<Category> Categories { get; }
+
+        void SaveCategory(Category category);
     }
 }

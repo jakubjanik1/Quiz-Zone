@@ -1,0 +1,12 @@
+﻿.input-validation-error 
+{
+    background-color: #ffcccc
+}
+
+.field-validation-error 
+{
+    display: block;
+    color: rgb(101, 116, 141);
+    margin-top: 5px;
+    font-size: 17px;
+}

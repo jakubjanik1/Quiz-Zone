@@ -112,11 +112,14 @@
   <ItemGroup>
     <Content Include="Font\fontello.svg" />
     <Content Include="Global.asax" />
+    <Content Include="Style\Categories.css" />
+    <Content Include="Style\Edits.css" />
     <Content Include="Style\Fontello\fontello.css" />
     <Content Include="Style\Layout.css" />
     <Content Include="Style\Play.css" />
     <Content Include="Style\Quizzes.css" />
     <Content Include="Style\Summary.css" />
+    <Content Include="Style\Validation.css" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -124,6 +127,7 @@
   <ItemGroup>
     <Compile Include="App_Start\NinjectWebCommon.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\MainController.cs" />
     <Compile Include="DAL\QuizDbContext.cs" />
     <Compile Include="Global.asax.cs">
@@ -146,6 +150,8 @@
     <Content Include="Views\Main\Quizzes.cshtml" />
     <Content Include="Views\Main\Play.cshtml" />
     <Content Include="Views\_Layout.cshtml" />
+    <Content Include="Views\Admin\EditCategory.cshtml" />
+    <Content Include="Views\Admin\Categories.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

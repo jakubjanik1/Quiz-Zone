@@ -41,7 +41,7 @@
     color: rgb(11, 164, 250);
 }
 
-.button
+a.button
 {
     width: 250px;
     background-color: rgb(160, 172, 191);
@@ -55,18 +55,18 @@
     letter-spacing: 1px;
 }
 
-.button:hover 
+a.button:hover 
 {
     cursor: pointer;
     background-color: rgb(139, 150, 166);
 }
 
-a:first-of-type .button
+a.button:first-of-type
 {
     margin-left: 200px;
 }
 
-a:last-of-type .button
+a.button:last-of-type
 {
     margin-left: 100px;
 }

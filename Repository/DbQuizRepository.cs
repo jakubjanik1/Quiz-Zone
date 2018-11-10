@@ -20,5 +20,23 @@ namespace Quiz_Zone.Repository
         {
             get { return context.Categories; }
         }
+
+        public void SaveCategory(Category category)
+        {
+            if (category.CategoryID == 0)
+            {
+                context.Categories.Add(category);
+            }
+            else
+            {
+                var dbEntry = context.Categories.Find(category.CategoryID);
+                if(dbEntry != null)
+                {
+                    dbEntry.Name = category.Name;
+                    dbEntry.Description = category.Description;
+                }
+            }
+            context.SaveChanges();
+        }
     }
 }

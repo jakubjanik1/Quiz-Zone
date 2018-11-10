@@ -44,16 +44,8 @@
         <div class="label"> Liczba pytań <span class="number" id="count"></span> </div>
     </div>
 
-    <a href="@Url.Action("Play", new { categoryName = Model.ElementAt(0).Category.Name })">
-        <div class="button">
-            Zagraj jeszcze raz
-        </div>
-    </a>
-    <a href="@Url.Action("Quizzes")">
-        <div class="button">
-            Powrót do quizów
-        </div>
-    </a>
+    @Html.ActionLink("Zagraj jeszcze raz", "Play", "Main", new { categoryName = Model.ElementAt(0).Category.Name }, new { @class = "button" })
+    @Html.ActionLink("Powrót do quizów", "Quizzes", "Main", null, new { @class = "button" })
 </div>
 
 <script>

@@ -1,5 +1,7 @@
-﻿using System;
+﻿using Quiz_Zone.DAL;
+using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -13,6 +15,7 @@ namespace Quiz_Zone
         {
             AreaRegistration.RegisterAllAreas();
             RouteConfig.RegisterRoutes(RouteTable.Routes);
+            Database.SetInitializer<QuizDbContext>(null);
         }
     }
 }

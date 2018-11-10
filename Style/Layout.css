@@ -93,6 +93,11 @@ a
     text-decoration: none;
 }
 
+a:focus
+{
+    display: none;
+}
+
 main
 {
     background-color: rgb(235, 241, 245);

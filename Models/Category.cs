@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+﻿using System.ComponentModel.DataAnnotations;
 
 namespace Quiz_Zone.Models
 {
@@ -9,8 +6,12 @@ namespace Quiz_Zone.Models
     {
         public int CategoryID { get; set; }
 
+        [Required(ErrorMessage = "Podaj nazwę!")]
+        [Display(Name = "Nazwa")]
         public string Name { get; set; }
 
+        [Required(ErrorMessage = "Podaj opis!")]
+        [Display(Name = "Opis")]
         public string Description { get; set; }
 
         public byte[] IconData { get; set; }

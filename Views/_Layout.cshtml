@@ -6,6 +6,9 @@
     <link rel="stylesheet" href="~/Style/Quizzes.css" />
     <link rel="stylesheet" href="~/Style/Play.css" />
     <link rel="stylesheet" href="~/Style/Summary.css" />
+    <link rel="stylesheet" href="~/Style/Edits.css" />
+    <link rel="stylesheet" href="~/Style/Categories.css" />
+    <link rel="stylesheet" href="~/Style/Validation.css" />
     <link rel="stylesheet" href="~/Style/Fontello/fontello.css" />
     <link href="https://fonts.googleapis.com/css?family=Lato:400,900" rel="stylesheet">
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
@@ -23,7 +26,7 @@
                 <i class="icon-home"></i>
                 <div class="optionContent" style="line-height: 44px;">Start</div>
             </div>
-            <a href="@Url.Action("Quizzes")">
+            <a href="@Url.Action("Quizzes", "Main")">
                 <div class="option">
                     <i class="icon-quizzes"></i>
                     <div class="optionContent">Quizy</div>
@@ -44,10 +47,12 @@
                 <i class="icon-users"></i>
                 <div class="optionContent" style="line-height: 44px;">Użytkownicy</div>
             </div>
-            <div class="option">
-                <i class="icon-edit-questions"></i>
-                <div class="optionContent">Pytania</div>
-            </div>
+            <a href="@Url.Action("Categories", "Admin")">
+                <div class="option">
+                    <i class="icon-edit-questions"></i>
+                    <div class="optionContent">Pytania</div>
+                </div>
+            </a>
         </nav>
     </aside>
     <main>
