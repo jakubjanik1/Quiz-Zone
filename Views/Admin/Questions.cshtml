@@ -5,7 +5,8 @@
 }
 
 <div class="form">
-    <div class="title">Pytania - </div>
+    <div class="title">Pytania</div>
+    <div class="subtitle">@ViewBag.CategoryName</div>
     <table>
         <thead>
             <tr>
@@ -18,7 +19,7 @@
             {
                 <tr>
                     <td>@question.Content</td>
-                    <td>
+                    <td style="width: 122px;">
                         @Html.ActionLink("Edytuj", "EditQuestion", new { questionId = question.QuestionID }, new { @class = "action" })
                         @Html.ActionLink("Usuń", "DeleteQuestion", new { questionId = question.QuestionID }, new { @class = "action" })
                     </td>

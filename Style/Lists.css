@@ -6,6 +6,12 @@
     color: rgb(101, 116, 141);
 }
 
+.subtitle 
+{
+    color: rgb(11, 164, 250);
+    font-weight: 900;
+}
+
 table 
 {
     background-color: white;
@@ -14,6 +20,11 @@ table
     border: 1px solid rgb(160, 172, 191);
     border-radius: 10px;
     border-spacing: 0;
+}
+
+tr
+{
+    height: 62px;
 }
 
 td, th 
@@ -26,8 +37,13 @@ th
 {
     color: white;
     background-color: rgb(11, 164, 250);
-    font-size: 20px;
+    font-size: 18px;
     letter-spacing: 1px;
+}
+
+tr td:last-child
+{
+    width: 198px;
 }
 
 td:first-child 

@@ -52,9 +52,9 @@ namespace Quiz_Zone.Controllers
         }
 
         public ViewResult Questions(int categoryId)
-        {
-            
+        {           
             ViewBag.CategoryId = categoryId;
+            ViewBag.CategoryName = repository.Categories.First(c => c.CategoryID == categoryId).Name;
             return View( repository.Questions.Where(q => q.CategoryID == categoryId) );
         }
 
