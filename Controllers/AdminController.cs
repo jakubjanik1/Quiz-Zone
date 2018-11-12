@@ -1,7 +1,7 @@
 ﻿using Quiz_Zone.Models;
 using Quiz_Zone.Repository;
-using System.Collections.Generic;
 using System.Linq;
+using System.Web;
 using System.Web.Mvc;
 
 namespace Quiz_Zone.Controllers
@@ -27,16 +27,36 @@ namespace Quiz_Zone.Controllers
         }
 
         [HttpPost]
-        public ActionResult EditCategory(Category category)
+        public ActionResult EditCategory(Category category, HttpPostedFileBase icon = null)
         {
             if (ModelState.IsValid)
             {
+                if (icon != null)
+                {
+                    category.IconMimeType = icon.ContentType;
+                    category.IconName = icon.FileName;
+                    category.IconData = new byte[icon.ContentLength];                 
+                    icon.InputStream.Read(category.IconData, 0, icon.ContentLength);
+                }
                 repository.SaveCategory(category);
                 return RedirectToAction("Categories");
             }
             else
             {
                 return View(category);
+            }
+        }
+
+        public FileContentResult GetCategoryIcon(int categoryId)
+        {
+            var category = repository.Categories.FirstOrDefault(c => c.CategoryID == categoryId);
+            if (category != null)
+            {
+                return File(category.IconData, category.IconMimeType);
+            }
+            else
+            {
+                return null;
             }
         }
 

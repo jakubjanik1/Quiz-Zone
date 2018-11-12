@@ -17,5 +17,7 @@ namespace Quiz_Zone.Models
         public byte[] IconData { get; set; }
 
         public string IconMimeType { get; set; }
+
+        public string IconName { get; set; }
     }
 }

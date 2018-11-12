@@ -9,6 +9,15 @@
     font-size: 17px;
 }
 
+.textBoxUpload 
+{
+    width: 560px;
+    float: left;
+    border-radius: 10px 0 0 10px;
+    padding-left: 70px;
+    position: relative;
+}
+
 .textBox:focus 
 {
     outline: none;
@@ -71,4 +80,54 @@ a.editAction:not(:last-child)
 {
     padding: 20px;
     margin-left: 150px;
+}
+
+
+input[type="file"] 
+{
+    display: none;
+}
+
+.form form img
+{
+    clear: both;
+    display: block;
+    height: 48px;
+    width: 48px;
+    position: absolute;
+    left: -640px;
+    top: 7px;
+    z-index: 1;
+}
+
+.form form img::after 
+{
+    content: "\f1c5" " " attr(alt);
+    background-color: white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.upload 
+{
+    display: block;
+    padding: 20px;
+    background-color: rgb(160, 172, 191);
+    color: white;
+    border-radius: 0 10px 10px 0;
+    width: 210px;
+    height: 22px;
+    text-align: center;
+    float: left;
+    margin: 0;
+    position: relative;
+}
+
+.upload:hover 
+{
+    cursor: pointer;
+    background-color: rgb(139, 150, 166);
 }

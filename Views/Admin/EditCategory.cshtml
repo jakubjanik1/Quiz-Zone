@@ -18,6 +18,7 @@
                 case "CategoryID":
                 case "IconData":
                 case "IconMimeType":
+                case "IconName":
                     break;
 
                 default:
@@ -27,7 +28,48 @@
             }
             @Html.ValidationMessage(property.PropertyName)
         }
+
+        <label>Ikona</label>
+        
+        <input class="textBox textBoxUpload" id="chosenFile" type="text" value="@Model.IconName" readonly>
+        <label class="upload">
+            <img src="@Url.Action("GetCategoryIcon", "Admin", new { categoryId = Model.CategoryID })" id="icon" onerror="this.src = ''">
+            Wybierz
+            <input type="file" id="file" name="icon" accept="image/png">
+        </label>
+
+
+
         <input type="submit" value="Zapisz" class="editAction">
         @Html.ActionLink("Anuluj", "Categories", null, new { @class = "editAction" })
     }
 </div>
+
+<script>
+
+    function setChosenFileName()
+    {
+        let file = $("#file")[0].files[0];
+        document.getElementById("chosenFile").setAttribute("value", file.name);
+    }
+
+    function setChosenFileIcon(event)
+    {
+        let file = event.target.files[0];
+        let reader = new FileReader();
+
+        reader.onload = (function (theFile) {
+            return function (e) {
+                document.getElementById("icon").setAttribute("src", e.target.result);
+            };
+        })(file);
+
+        reader.readAsDataURL(file);
+    }
+
+    document.getElementById("file").addEventListener('change', function () {
+        setChosenFileName();
+        setChosenFileIcon(event);
+    }
+    , false);
+</script>

@@ -34,6 +34,9 @@ namespace Quiz_Zone.Repository
                 {
                     dbEntry.Name = category.Name;
                     dbEntry.Description = category.Description;
+                    dbEntry.IconData = category.IconData;
+                    dbEntry.IconMimeType = category.IconMimeType;
+                    dbEntry.IconName = category.IconName;
                 }
             }
             context.SaveChanges();
