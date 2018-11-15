@@ -1,15 +1,9 @@
 ﻿body 
 {
-    /*SMALL EDITION*/
     width: 1300px;
     background-color: rgb(42, 77, 94);
-    margin-left: auto;
-    margin-right: auto;
-
-    /*width: auto;*/
     font-family: 'Lato', sans-serif;
-    margin-top: 0;
-    margin-bottom: 0;
+    margin: 0 auto 0 auto;
 }
 
 aside
@@ -75,6 +69,19 @@ nav
 }
 
 .option:hover i:before
+{
+    color: white;
+}
+
+.optionActive 
+{
+    border-left: 4px solid rgb(11, 164, 250);
+    margin-left: 0;
+    background-color: rgb(47, 57, 73);
+    color: white;
+}
+
+.optionActive i:before
 {
     color: white;
 }

@@ -15,8 +15,7 @@ namespace Quiz_Zone
 
             routes.MapRoute(
                 name: "Default",
-                url: "{controller}/{action}/{id}",
-                defaults: new { controller = "Main", action = "Quizzes", id = UrlParameter.Optional }
+                url: "{controller}/{action}"
             );
         }
     }
