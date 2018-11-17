@@ -21,6 +21,19 @@
             let modifiedUrl = url.replace(/[/Admin/](Questions|EditCategory|CreateCategory|CreateQuestion|EditQuestion)/i, '/Categories');
 
             $('a[href="' + modifiedUrl + '"] > .option').addClass('optionActive');
+
+            if (url == '/Main/Quizzes') {
+                $('main').css('overflow-y', 'scroll');  
+            }
+
+            $('tbody').scroll(function () {
+                if ($('tbody').scrollTop() >= 61) {
+                    $('tbody').addClass('bottomScrollbar');
+                }
+                else {
+                    $('tbody').removeClass('bottomScrollbar');
+                }
+            });
         });
 
     </script>

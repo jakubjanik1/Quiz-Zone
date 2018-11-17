@@ -1,16 +1,27 @@
 ﻿#grid 
 {
     display: grid;
-    grid-template-columns: 220px 220px 220px 220px;
+    grid-template-columns: 217px 217px 217px 217px;
     grid-gap: 44px;
-    margin: 30px 44px;
+    margin: 30px 38px 30px 50px;
+}
+
+main::-webkit-scrollbar 
+{
+    width: 12px;
+}
+
+main::-webkit-scrollbar-thumb 
+{
+    width: 12px;
+    background-color: rgb(160, 172, 191);
 }
 
 .tile 
 {
     background-color: white;
-    width: 220px;
-    height: 270px;
+    width: 217px;
+    height: 267px;
     border-radius: 5px;
     -webkit-box-shadow: 3px 3px 35px -6px rgba(0,0,0,0.75);
     -moz-box-shadow: 3px 3px 35px -6px rgba(0,0,0,0.75);
@@ -26,7 +37,7 @@
 
 .tile img
 {
-    width: 150px;
+    width: 147px;
     margin: 35px 35px 25px 35px;
     transition: transform 0.5s ease-in-out;
 }
@@ -77,7 +88,7 @@
     color: white;
     transition: 0.5s;
     position: absolute;
-    left: 80px;
+    left: 78px;
     bottom: 15px;
 }
 

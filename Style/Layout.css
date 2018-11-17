@@ -10,7 +10,7 @@ aside
 {
     width: 200px;
     background-color: rgb(53, 64, 82);
-    height: 938px;
+    height: 100vh;
     float: left;
 }
 
@@ -108,8 +108,8 @@ a:focus
 main
 {
     background-color: rgb(235, 241, 245);
-    overflow: hidden;
-    height: 938px;   
+    height: 100vh; 
+    overflow-y: hidden;
 }
 
 .optionContent

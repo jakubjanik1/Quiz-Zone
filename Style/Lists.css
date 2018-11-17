@@ -22,9 +22,58 @@ table
     border-spacing: 0;
 }
 
-tr
+tbody 
 {
-    height: 62px;
+    display: block;
+    overflow-y: auto;
+    overflow-x: hidden;
+    max-height: 566px;
+}
+
+tbody::-webkit-scrollbar 
+{
+    background-color: white;
+    width: 12px;
+    border-bottom-right-radius: 10px;
+}
+
+tbody::-webkit-scrollbar-thumb 
+{
+    background-color: rgb(160, 172, 191);
+}
+
+.bottomScrollbar::-webkit-scrollbar-thumb
+{
+    border-bottom-right-radius: 8px;
+}
+
+tr 
+{
+    min-height: 62px;
+    display: block;
+    border-top: 1px solid rgb(160, 172, 191);
+    position: relative;
+}
+
+tr:not(:first-child)::before 
+{
+    content: "";
+    position: absolute;
+    top: -1px;
+    width: 12px;
+    left: 888px;
+    border-top: 1px solid white;
+}
+
+thead tr 
+{
+    border-top: 0;
+    border-bottom: 1px solid rgb(160, 172, 191);
+}
+
+tr:first-child 
+{
+    border-top: 0;
 }
 
 td, th 
@@ -39,33 +88,75 @@ th
     background-color: rgb(11, 164, 250);
     font-size: 18px;
     letter-spacing: 1px;
+    height: 32px;
 }
 
-tr td:last-child
-{
-    width: 198px;
-}
-
-td:first-child 
+.categories td:first-child 
 {
     border-left: 0;
+    width: 98px;
 }
 
-th:first-child 
+.categories td:nth-child(2) 
 {
+    width: 499px;
+}
+
+.categories td:last-child 
+{
+    width: 198px;
+    border-right: 1px solid rgb(160, 172, 191);
+    text-align: center;
+}
+
+.categories th:first-child 
+{
+    min-width: 98px;
     border-left: 0;
     border-radius: 9px 0 0 0;
 }
 
-th:last-child 
+.categories th:nth-child(2) 
 {
+    min-width: 499px;
+}
+
+.categories th:last-child 
+{
+    min-width: 211px;
+    border-radius: 0 9px 0 0;
+}
+
+.questions td:first-child 
+{
+    border-left: 0;
+    width: 704px;
+}
+
+.questions td:last-child 
+{
+    border-right: 1px solid rgb(160, 172, 191);
+    text-align: center;
+    min-width: 83px;
+}
+
+.questions th:first-child 
+{
+    width: 704px;
+    border-left: 0;
+    border-radius: 9px 0 0 0;
+}
+
+.questions th:last-child 
+{
+    width: 135px;
     border-radius: 0 9px 0 0;
 }
 
 td 
 {
-    border-top: 1px solid rgb(160, 172, 191);
     color: rgb(101, 116, 141);
+    height: 32px;
 }
 
 a.action 
