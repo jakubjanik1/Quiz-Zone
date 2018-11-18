@@ -12,7 +12,7 @@
             <img src="@Url.Action("GetCategoryIcon", "Admin", new { category.CategoryID })" alt="icon">
             <div class="name">@category.Name</div>
             <div class="description">@category.Description</div>
-            <a href="@Url.Action("Play", new { categoryName = category.Name})">
+            <a href="@Url.Action("Play", new { categoryId = category.CategoryID})">
                 <div class="playButton">Graj</div>
             </a>
         </div>

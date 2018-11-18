@@ -27,7 +27,7 @@
             }
 
             $('tbody').scroll(function () {
-                if ($('tbody').scrollTop() >= 61) {
+                if ($('tbody').scrollTop() + $('tbody').prop('offsetHeight') >= $('tbody').prop('scrollHeight') - 1) {
                     $('tbody').addClass('bottomScrollbar');
                 }
                 else {

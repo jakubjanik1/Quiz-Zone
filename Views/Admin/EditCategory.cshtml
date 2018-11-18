@@ -11,6 +11,9 @@
     @using (Html.BeginForm("EditCategory", "Admin", FormMethod.Post, new { enctype = "multipart/form-data" }))
     {
         @Html.HiddenFor(c => c.CategoryID)
+        @Html.HiddenFor(c => c.IconData)
+        @Html.HiddenFor(c => c.IconMimeType)
+        @Html.HiddenFor(c => c.IconName)
         foreach (var property in ViewData.ModelMetadata.Properties)
         {
             switch (property.PropertyName)
@@ -24,21 +27,20 @@
                 default:
                     <label>@(property.DisplayName ?? property.PropertyName)</label>
                     @Html.TextBox(property.PropertyName, null, new { @class = "textBox" })
+                    @Html.ValidationMessage(property.PropertyName)
                     break;
             }
-            @Html.ValidationMessage(property.PropertyName)
+
         }
 
         <label>Ikona</label>
-        
+
         <input class="textBox textBoxUpload" id="chosenFile" type="text" value="@Model.IconName" readonly>
         <label class="upload">
             <img src="@Url.Action("GetCategoryIcon", "Admin", new { categoryId = Model.CategoryID })" id="icon" onerror="this.src = ''">
             Wybierz
             <input type="file" id="file" name="icon" accept="image/png">
         </label>
-
-
 
         <input type="submit" value="Zapisz" class="editAction">
         @Html.ActionLink("Anuluj", "Categories", null, new { @class = "editAction" })

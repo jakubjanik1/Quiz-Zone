@@ -17,6 +17,11 @@ main::-webkit-scrollbar-thumb
     background-color: rgb(160, 172, 191);
 }
 
+main::-webkit-scrollbar-thumb:vertical:hover 
+{
+    background-color: rgb(139, 150, 166);
+}
+
 .tile 
 {
     background-color: white;
@@ -67,6 +72,8 @@ main::-webkit-scrollbar-thumb
     color: rgb(160, 172, 191);
     padding: 8px;
     opacity: 0;
+    position: absolute;
+    bottom: 0;
     transition: transform 0.5s ease-in-out;
 }
 
@@ -83,13 +90,14 @@ main::-webkit-scrollbar-thumb
     border-radius: 5px;
     font-size: 17px;
     width: 60px;
-    height: 25px;
+    height: 21px;
     font-weight: 900;
     color: white;
     transition: 0.5s;
     position: absolute;
     left: 78px;
     bottom: 15px;
+    padding: 3px 0 3px 0;
 }
 
 .playButton:hover 

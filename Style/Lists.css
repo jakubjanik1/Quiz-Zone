@@ -42,6 +42,11 @@ tbody::-webkit-scrollbar-thumb
     background-color: rgb(160, 172, 191);
 }
 
+tbody::-webkit-scrollbar-thumb:vertical:hover 
+{
+    background-color: rgb(139, 150, 166);
+}
+
 .bottomScrollbar::-webkit-scrollbar-thumb
 {
     border-bottom-right-radius: 8px;
