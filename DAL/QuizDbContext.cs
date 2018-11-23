@@ -13,8 +13,12 @@ namespace Quiz_Zone.DAL
 
         public DbSet<Category> Categories { get; set; }
 
+        public DbSet<Account> Accounts { get; set; }
+
+        public DbSet<Score> Scores { get; set; }
+
         public QuizDbContext()
-            : base("QuizZoneDB")
+            : base("QuizZoneDb")
         {
 
         }

@@ -9,6 +9,14 @@ namespace Quiz_Zone.Repository
 
         IEnumerable<Category> Categories { get; }
 
+        IEnumerable<Account> Accounts { get; }
+
+        Account FindAccount(Account account);
+
+        void UpdateScore(int accountId, string categoryName, int newScore);
+
+        void SaveAccount(Account account);
+
         void SaveCategory(Category category);
 
         void DeleteCategory(int categoryId);

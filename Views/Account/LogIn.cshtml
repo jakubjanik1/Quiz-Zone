@@ -1,0 +1,33 @@
+﻿@model Quiz_Zone.Models.Account
+
+@{
+    Layout = "~/Views/_Layout.cshtml";
+}
+
+<div class="form">
+    <div class="title">Logowanie</div>
+
+    @using (Html.BeginForm("LogIn", "Account"))
+    {
+        @Html.HiddenFor(a => a.AccountID)
+        foreach (var property in ViewData.ModelMetadata.Properties)
+        {
+            switch (property.PropertyName)
+            {
+                case "AccountID":
+                case "Scores":
+                    break;
+
+                default:
+                    <label>@(property.DisplayName ?? property.PropertyName)</label>
+                    @Html.TextBox(property.PropertyName, null, new { @class = "textBox" })
+                    break;
+            }
+            @Html.ValidationMessage(property.PropertyName)
+        }
+        <div class="errorMessage">@ViewBag.Error</div>
+        <input type="submit" value="Zaloguj się" class="editAction">
+        @Html.ActionLink("Anuluj", "Quizzes", "Main", null, new { @class = "editAction" })
+    }
+</div>
+

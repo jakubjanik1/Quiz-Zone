@@ -131,3 +131,13 @@ input[type="file"]
     cursor: pointer;
     background-color: rgb(139, 150, 166);
 }
+
+.errorMessage 
+{
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+    color: rgb(101, 116, 141);
+    letter-spacing: 1px;
+    margin-top: 20px;
+}

@@ -41,8 +41,14 @@
 <body>
     <aside>
         <div id="accountInfo">
+
             <img src="~/person.png" alt="profile" />
-            <div id="accountName">Jakub Janik</div>
+            <div id="accountName">@Html.Action("GetAccountLogin", "Account")</div>
+
+            @if (Html.Action("GetAccountLogin", "Account") == MvcHtmlString.Empty)
+            {
+
+            }
         </div>
         <nav>
             <div class="legend">Main</div>

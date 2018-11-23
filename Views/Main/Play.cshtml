@@ -108,6 +108,13 @@
         let percentResult = (score / questions.length) * 100;
         $('.circle').css('stroke-dasharray', percentResult + ', 100');
         $('.percentage').text(percentResult + '%');
+        
+        $.ajax({
+            type: "POST",
+            url: "/Account/UpdateScore",
+            data: { "categoryName": questions[numOfQuestion].Category.Name, "scoreValue": score }
+        });
+        
     }
   
     function activateAnswers()
