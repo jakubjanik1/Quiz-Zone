@@ -14,18 +14,25 @@ aside
     float: left;
 }
 
-#accountInfo
+#accountInfo 
 {
     height: 200px;
     border-bottom: 3px solid rgb(42, 52, 67);
 }
 
-#accountInfo img
+#accountInfo img 
 {
     width: 100px;
     height: 100px;
-    margin: 32px 50px 15px 50px;
+    margin: 32px 50px 10px 50px;
     border-radius: 50%;
+}
+
+#accountLogging 
+{
+    height: 140px;
+    border-bottom: 3px solid rgb(42, 52, 67);
+    padding: 30px 0 30px 0;
 }
 
 #accountName 
@@ -33,6 +40,37 @@ aside
     font-size: 18px;
     text-align: center;
     color: rgb(160, 172, 191);
+}
+
+.accountOption
+{
+    display: block;
+    color: white;
+    background-color: rgb(11, 164, 250);
+    padding: 10px;
+    text-align: center;
+    margin: 20px 25px 20px 25px;
+    font-weight: 900;
+    font-size: 16px;
+    border-radius: 10px;
+}
+
+.accountOption:hover 
+{
+    background-color: rgb(11, 140, 250);
+}
+
+.fa.fa-sign-out 
+{
+    font-size: 20px;
+    padding-left: 5px;
+    color: rgb(160, 172, 191);
+}
+
+.fa.fa-sign-out:hover 
+{
+    color: white;
+    cursor: pointer;
 }
 
 nav 

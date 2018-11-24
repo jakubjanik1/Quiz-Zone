@@ -8,7 +8,7 @@
 <div class="form">
     <div class="title">Pytanie</div>
 
-    @using (Html.BeginForm("EditQuestion", "Admin"))
+    @using (Html.BeginForm("EditQuestion", "Admin", FormMethod.Post, new { autocomplete = "off" }))
     {
         @Html.HiddenFor(q => q.QuestionID)
         @Html.HiddenFor(q => q.CategoryID)

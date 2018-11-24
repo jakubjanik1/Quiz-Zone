@@ -11,6 +11,7 @@ namespace Quiz_Zone.Models
         [Required(ErrorMessage = "Podaj login!")]
         public string Login { get; set; }
 
+        [Display(Name = "Hasło")]
         [Required(ErrorMessage = "Podaj hasło!")]
         [DataType(DataType.Password)]
         public string Password { get; set; }

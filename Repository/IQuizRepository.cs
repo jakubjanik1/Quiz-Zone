@@ -11,7 +11,7 @@ namespace Quiz_Zone.Repository
 
         IEnumerable<Account> Accounts { get; }
 
-        Account FindAccount(Account account);
+        bool FindAccount(Account account);
 
         void UpdateScore(int accountId, string categoryName, int newScore);
 

@@ -7,7 +7,7 @@
 <div class="form">
     <div class="title">Logowanie</div>
 
-    @using (Html.BeginForm("LogIn", "Account"))
+    @using (Html.BeginForm("LogIn", "Account", FormMethod.Post, new { autocomplete = "off" }))
     {
         @Html.HiddenFor(a => a.AccountID)
         foreach (var property in ViewData.ModelMetadata.Properties)

@@ -8,7 +8,7 @@
 <div class="form">
     <div class="title">@(Model.Name ?? "Kategoria")</div>
 
-    @using (Html.BeginForm("EditCategory", "Admin", FormMethod.Post, new { enctype = "multipart/form-data" }))
+    @using (Html.BeginForm("EditCategory", "Admin", FormMethod.Post, new { enctype = "multipart/form-data", autocomplete = "off" }))
     {
         @Html.HiddenFor(c => c.CategoryID)
         @Html.HiddenFor(c => c.IconData)

@@ -9,7 +9,7 @@ namespace Quiz_Zone.Controllers
     public class AccountController : Controller
     {
         private IQuizRepository repository;
-        private static Account activeAccount;
+        private static Account activeAccount = null;
 
         public AccountController(IQuizRepository repo)
         {
@@ -51,23 +51,30 @@ namespace Quiz_Zone.Controllers
         {
             if (ModelState.IsValid)
             {
-                activeAccount = repository.FindAccount(account);
-                if (activeAccount == null)
+                bool foundAccount = repository.FindAccount(account);
+                if (foundAccount)
                 {
-                    ViewBag.Error = "Błędne hasło lub login!";
-                    return View(account);
+                    activeAccount = account;
+                    return RedirectToAction("Quizzes", "Main");                  
                 }
                 else
                 {
-                    return RedirectToAction("Quizzes", "Main");
+                    ViewBag.Error = "Błędne hasło lub login!";
+                    return View(account);
                 }
             }
             return View(account);
         }
 
+        public ActionResult LogOut()
+        {
+            activeAccount = null;
+            return Redirect(Request.UrlReferrer.ToString());
+        }
+
         public string GetAccountLogin()
         {
-            return activeAccount != null ? activeAccount.Login : string.Empty;
+            return activeAccount?.Login;
         }
 
         public void UpdateScore(string categoryName, int scoreValue)

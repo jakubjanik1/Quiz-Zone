@@ -48,14 +48,14 @@ namespace Quiz_Zone.Repository
             context.SaveChanges();
         }
 
-        public Account FindAccount(Account account)
+        public bool FindAccount(Account account)
         {
             var foundAccount = context.Accounts.Where(a => a.Login == account.Login).FirstOrDefault();
             if (foundAccount != null)
             {
-                return (foundAccount.Password == account.Password) ? foundAccount : null;
+                return (foundAccount.Password == account.Password) ? true : false;
             }
-            return null;
+            return false;
         }
 
         public void SaveCategory(Category category)

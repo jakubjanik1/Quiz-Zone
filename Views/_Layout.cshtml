@@ -11,19 +11,20 @@
     <link rel="stylesheet" href="~/Style/Validation.css" />
     <link rel="stylesheet" href="~/Style/Fontello/fontello.css" />
     <link href="https://fonts.googleapis.com/css?family=Lato:400,900" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
     <title>Quiz Zone</title>
 
     <script>
 
-        $(document).ready( function() {
+        $(document).ready(function () {
             let url = window.location.pathname;
             let modifiedUrl = url.replace(/[/Admin/](Questions|EditCategory|CreateCategory|CreateQuestion|EditQuestion)/i, '/Categories');
 
             $('a[href="' + modifiedUrl + '"] > .option').addClass('optionActive');
 
             if (url == '/Main/Quizzes') {
-                $('main').css('overflow-y', 'scroll');  
+                $('main').css('overflow-y', 'scroll');
             }
 
             $('tbody').scroll(function () {
@@ -40,16 +41,24 @@
 </head>
 <body>
     <aside>
-        <div id="accountInfo">
-
-            <img src="~/person.png" alt="profile" />
-            <div id="accountName">@Html.Action("GetAccountLogin", "Account")</div>
-
-            @if (Html.Action("GetAccountLogin", "Account") == MvcHtmlString.Empty)
-            {
-
-            }
-        </div>
+        @if (Html.Action("GetAccountLogin", "Account").ToString() == "")
+        {
+            <div id="accountLogging">
+                @Html.ActionLink("Zaloguj się", "LogIn", "Account", null, new { @class = "accountOption" })
+                @Html.ActionLink("Zarejestruj się", "SignIn", "Account", null, new { @class = "accountOption" })
+            </div>
+        }
+        else
+        {
+            <div id="accountInfo">
+                <img src="~/person.png" alt="profile" />
+                <div id="accountName">
+                    @Html.Action("GetAccountLogin", "Account")  
+                    @Html.ActionLink(" ", "LogOut", "Account", null, new { @class = "fa fa-sign-out", title = "Wyloguj się" })
+                </div>
+            </div>
+        }
+            
         <nav>
             <div class="legend">Main</div>
             <div class="option">

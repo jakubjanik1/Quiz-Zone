@@ -49,6 +49,7 @@ a.editAction, input.editAction
     color: white;
     font-weight: 900;
     font-size: 18px;
+    font-family: Lato, sans-serif;
     letter-spacing: 1px;
     padding: 18px;
     border-radius: 10px;
@@ -68,6 +69,7 @@ a.editAction:hover, input.editAction:hover
 input.editAction
 {
     margin-left: 150px;
+    padding: 20px;
 }
 
 a.editAction:last-child
