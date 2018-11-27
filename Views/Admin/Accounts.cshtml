@@ -1,0 +1,28 @@
+﻿@model IEnumerable<Quiz_Zone.Models.Account>
+
+@{
+    Layout = "~/Views/_Layout.cshtml";
+}
+
+<div class="form">
+    <div class="title">Użytkownicy</div>
+    <table class="accounts">
+        <thead>
+            <tr>
+                <th>Login</th>
+                <th>Hasło</th>
+                <th>Wiek</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var account in Model)
+            {
+                <tr>
+                    <td>@account.Login</td>
+                    <td>@account.Password</td>
+                    <td>@account.Age</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

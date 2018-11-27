@@ -16,11 +16,17 @@
             {
                 case "AccountID":
                 case "Scores":
+                case "Age":
                     break;
 
-                default:
+                case "Login":
                     <label>@(property.DisplayName ?? property.PropertyName)</label>
                     @Html.TextBox(property.PropertyName, null, new { @class = "textBox" })
+                    break;
+
+                case "Password":
+                    <label>@(property.DisplayName ?? property.PropertyName)</label>
+                    @Html.TextBox(property.PropertyName, null, new { @class = "textBox", type = "password" })
                     break;
             }
             @Html.ValidationMessage(property.PropertyName)

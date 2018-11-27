@@ -132,6 +132,42 @@ th
     border-radius: 0 9px 0 0;
 }
 
+.accounts td:first-child 
+{
+    border-left: 0;
+    width: 265px;
+}
+
+.accounts td:nth-child(2) 
+{
+    width: 315px;
+}
+
+.accounts td:last-child 
+{
+    width: 215px;
+    border-right: 1px solid rgb(160, 172, 191);
+    text-align: center;
+}
+
+.accounts th:first-child 
+{
+    min-width: 265px;
+    border-left: 0;
+    border-radius: 9px 0 0 0;
+}
+
+.accounts th:nth-child(2) 
+{
+    min-width: 315px;
+}
+
+.accounts th:last-child 
+{
+    min-width: 228px;
+    border-radius: 0 9px 0 0;
+}
+
 .questions td:first-child 
 {
     border-left: 0;

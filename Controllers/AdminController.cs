@@ -15,6 +15,11 @@ namespace Quiz_Zone.Controllers
             repository = repo;
         }
 
+        public ViewResult Accounts()
+        {
+            return View(repository.Accounts);
+        }
+
         public ViewResult Categories()
         {
             return View(repository.Categories);

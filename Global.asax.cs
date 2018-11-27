@@ -15,7 +15,7 @@ namespace Quiz_Zone
         {
             AreaRegistration.RegisterAllAreas();
             RouteConfig.RegisterRoutes(RouteTable.Routes);
-            Database.SetInitializer<QuizDbContext>(null);
+            //Database.SetInitializer<QuizDbContext>(null);
         }
     }
 }

@@ -82,10 +82,12 @@
         </nav>
         <nav>
             <div class="legend">Admin</div>
-            <div class="option">
-                <i class="icon-users"></i>
-                <div class="optionContent" style="line-height: 44px;">Użytkownicy</div>
-            </div>
+            <a href="@Url.Action("Accounts", "Admin")">
+                <div class="option">
+                    <i class="icon-users"></i>
+                    <div class="optionContent" style="line-height: 44px;">Użytkownicy</div>
+                </div>
+            </a>
             <a href="@Url.Action("Categories", "Admin")">
                 <div class="option">
                     <i class="icon-edit-questions"></i>
