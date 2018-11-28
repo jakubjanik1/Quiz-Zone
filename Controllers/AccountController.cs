@@ -51,10 +51,10 @@ namespace Quiz_Zone.Controllers
         {
             if (ModelState.IsValid)
             {
-                bool foundAccount = repository.FindAccount(account);
-                if (foundAccount)
+                var foundAccount = repository.FindAccount(account);
+                if (foundAccount != null)
                 {
-                    activeAccount = account;
+                    activeAccount = foundAccount;
                     return RedirectToAction("Quizzes", "Main");                  
                 }
                 else
