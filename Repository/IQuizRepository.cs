@@ -13,7 +13,7 @@ namespace Quiz_Zone.Repository
 
         Account FindAccount(Account account);
 
-        void UpdateScore(int accountId, string categoryName, int newScore);
+        void UpdateScore(int accountId, int categoryId, int newScore);
 
         void SaveAccount(Account account);
 

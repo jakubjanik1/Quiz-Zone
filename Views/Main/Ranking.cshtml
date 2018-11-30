@@ -1,19 +1,9 @@
-﻿@model IEnumerable<Quiz_Zone.Models.Account>
+﻿@model IEnumerable<KeyValuePair<string, int>>
 
 @{
     Layout = "~/Views/_Layout.cshtml";
 
-    var categories = Model.ElementAt(0).Scores.Select(c => c.CategoryName).Distinct();
-    int position = 1;
-
-    var accounts = new List<KeyValuePair<string, int>>();
-    foreach (var account in Model)
-    {
-        int score = account.Scores.Where(a => a.CategoryName == ViewBag.CurrentCategoryName).FirstOrDefault().Value;
-        accounts.Add(new KeyValuePair<string, int>(account.Login, score));
-    }
-
-    var accountsScore = accounts.OrderByDescending(a => a.Value);
+    int position = 1;    
 }
 
 <div class="form">
@@ -25,9 +15,9 @@
             Zmień kategorię
         </div>
         <div id="options">
-            @foreach (var categoryName in categories)
+            @foreach (var category in ViewBag.Categories)
             {
-                <a href="@Url.Action("Ranking", "Main", new { categoryName })"> @categoryName </a>
+                <a href="@Url.Action("Ranking", "Main", new { category.CategoryID })"> @category.Name </a>
             }
         </div>
     </div>
@@ -41,7 +31,7 @@
             </tr>
         </thead>
         <tbody>
-            @foreach (var account in accountsScore)
+            @foreach (var account in Model)
             {
                 <tr>
                     <td> @position </td>

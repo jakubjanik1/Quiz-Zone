@@ -112,7 +112,7 @@
         $.ajax({
             type: "POST",
             url: "/Account/UpdateScore",
-            data: { "categoryName": questions[numOfQuestion].Category.Name, "scoreValue": score }
+            data: { "categoryId": questions[numOfQuestion].Category.CategoryID, "scoreValue": score }
         });
         
     }

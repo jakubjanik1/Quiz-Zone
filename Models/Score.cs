@@ -4,7 +4,9 @@
     {
         public int ScoreID { get; set; }
 
-        public string CategoryName { get; set; }
+        public int CategoryID { get; set; }
+
+        public virtual Category Category { get; set; }
 
         public int Value { get; set; }
     }

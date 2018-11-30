@@ -31,16 +31,16 @@ namespace Quiz_Zone.Repository
             account.Scores = new List<Score>();       
             foreach(var category in context.Categories)
             {               
-                account.Scores.Add(new Score { Value = 0, CategoryName = category.Name });
+                account.Scores.Add(new Score { Value = 0, CategoryID = category.CategoryID });
             }
             context.Accounts.Add(account);
             context.SaveChanges();
         }
 
-        public void UpdateScore(int accountId, string categoryName, int newScore)
+        public void UpdateScore(int accountId, int categoryId, int newScore)
         {
             var activeAccount = context.Accounts.Where(a => a.AccountID == accountId).FirstOrDefault();
-            var oldScore = activeAccount.Scores.Where(c => c.CategoryName == categoryName).FirstOrDefault();
+            var oldScore = activeAccount.Scores.Where(c => c.CategoryID == categoryId).FirstOrDefault();
             var dbEntry = context.Scores.Find(oldScore.ScoreID);
 
             dbEntry.Value += newScore;
@@ -66,7 +66,7 @@ namespace Quiz_Zone.Repository
 
                 foreach (var account in context.Accounts)
                 {
-                    account.Scores.Add(new Score { Value = 0, CategoryName = category.Name });
+                    account.Scores.Add(new Score { Value = 0, CategoryID = category.CategoryID });
                 }
             }
             else
@@ -101,7 +101,7 @@ namespace Quiz_Zone.Repository
 
             foreach (var account in context.Accounts)
             {
-                var scoreToRemove = account.Scores.Where(s => s.CategoryName == dbEntry.Name).FirstOrDefault();
+                var scoreToRemove = account.Scores.Where(s => s.CategoryID == dbEntry.CategoryID).FirstOrDefault();
                 context.Scores.Remove(scoreToRemove);
             }
 

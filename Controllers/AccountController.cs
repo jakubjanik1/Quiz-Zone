@@ -77,11 +77,11 @@ namespace Quiz_Zone.Controllers
             return activeAccount?.Login;
         }
 
-        public void UpdateScore(string categoryName, int scoreValue)
+        public void UpdateScore(int categoryId, int scoreValue)
         {
             if (activeAccount != null)
             {
-                repository.UpdateScore(activeAccount.AccountID, categoryName, scoreValue);
+                repository.UpdateScore(activeAccount.AccountID, categoryId, scoreValue);
             }
         }
     }
