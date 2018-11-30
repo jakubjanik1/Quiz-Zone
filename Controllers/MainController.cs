@@ -28,6 +28,12 @@ namespace Quiz_Zone.Controllers
             return View(questions);
         }
 
+        public ViewResult Ranking(string categoryName = "Film")
+        {
+            ViewBag.CurrentCategoryName = categoryName;
+            return View(repository.Accounts);
+        }
+
         private IEnumerable<Question> TakeRandomQuestions(int categoryId)
         {
             var repo = repository.Questions.Where(x => x.Category.CategoryID == categoryId);

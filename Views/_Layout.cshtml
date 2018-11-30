@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="~/Style/Edits.css" />
     <link rel="stylesheet" href="~/Style/Lists.css" />
     <link rel="stylesheet" href="~/Style/Validation.css" />
+    <link rel="stylesheet" href="~/Style/Ranking.css" />
     <link rel="stylesheet" href="~/Style/Fontello/fontello.css" />
     <link href="https://fonts.googleapis.com/css?family=Lato:400,900" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -71,10 +72,12 @@
                     <div class="optionContent">Quizy</div>
                 </div>
             </a>
-            <div class="option">
-                <i class="icon-ranking"></i>
-                <div class="optionContent">Ranking</div>
-            </div>
+            <a href="@Url.Action("Ranking", "Main")">
+                <div class="option">
+                    <i class="icon-ranking"></i>
+                    <div class="optionContent">Ranking</div>
+                </div>
+            </a>
             <div class="option">
                 <i class="icon-info"></i>
                 <div class="optionContent">Informacje</div>

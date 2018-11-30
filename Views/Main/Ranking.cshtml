@@ -1,0 +1,75 @@
+﻿@model IEnumerable<Quiz_Zone.Models.Account>
+
+@{
+    Layout = "~/Views/_Layout.cshtml";
+
+    var categories = Model.ElementAt(0).Scores.Select(c => c.CategoryName).Distinct();
+    int position = 1;
+
+    var accounts = new List<KeyValuePair<string, int>>();
+    foreach (var account in Model)
+    {
+        int score = account.Scores.Where(a => a.CategoryName == ViewBag.CurrentCategoryName).FirstOrDefault().Value;
+        accounts.Add(new KeyValuePair<string, int>(account.Login, score));
+    }
+
+    var accountsScore = accounts.OrderByDescending(a => a.Value);
+}
+
+<div class="form">
+    <div class="title">Ranking</div>
+    <div class="subtitle"> @ViewBag.CurrentCategoryName </div>
+
+    <div id="select">
+        <div id="selectButton">
+            Zmień kategorię
+        </div>
+        <div id="options">
+            @foreach (var categoryName in categories)
+            {
+                <a href="@Url.Action("Ranking", "Main", new { categoryName })"> @categoryName </a>
+            }
+        </div>
+    </div>
+
+    <table class="categories">
+        <thead>
+            <tr>
+                <th>Miejsce</th>
+                <th>Nazwa użytkownika</th>
+                <th>Ilość punktów</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var account in accountsScore)
+            {
+                <tr>
+                    <td> @position </td>
+                    <td>@account.Key</td>
+                    <td>
+                        @account.Value
+                    </td>
+                </tr>
+                position++;
+            }
+        </tbody>
+    </table>
+</div>
+
+<script>
+
+    var select = document.getElementById('select');
+    var options = document.getElementById('options');
+    var table = document.getElementsByClassName('categories');
+
+    select.onmouseover = function () {
+        options.style.display = 'block';
+        table[0].style.filter = 'blur(2px)';
+    }
+
+    select.onmouseleave = function () {
+        options.style.display = 'none';
+        table[0].style.filter = 'none';
+    }
+
+</script>

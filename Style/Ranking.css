@@ -1,0 +1,60 @@
+﻿#select
+{
+    position: relative;
+    margin-top: 20px;
+}
+
+#selectButton 
+{
+    background-color: #ffffff;
+    width: 862px;
+    padding: 20px;
+    border: 1px solid rgb(160, 172, 191);
+    border-radius: 10px;
+    font-size: 17px;
+    color: rgb(101, 116, 141);
+}
+
+#selectButton:hover
+{
+    cursor: pointer;
+}
+
+#options 
+{
+    width: 902px;
+    background-color: #ffffff;
+    display: none;
+    border-radius: 10px;
+    position: absolute;
+    top: 62px;
+    z-index: 1;
+}
+
+#options a 
+{
+    display: block;
+    padding: 10px;
+    border-color: rgb(160, 172, 191);
+    border-style: solid;
+    border-width: 1px 1px 0 1px;
+    text-decoration: none;
+    color: rgb(101, 116, 141);
+    font-size: 16px;
+}
+
+#options a:first-child 
+{
+    border-radius: 10px 10px 0 0;
+}
+
+#options a:last-child 
+{
+    border-radius: 0 0 10px 10px;
+    border-bottom-width: 1px;
+}
+
+#options a:hover 
+{
+    background-color: rgb(235, 241, 245);
+}

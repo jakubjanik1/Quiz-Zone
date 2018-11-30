@@ -118,6 +118,7 @@
     <Content Include="Style\Layout.css" />
     <Content Include="Style\Play.css" />
     <Content Include="Style\Quizzes.css" />
+    <Content Include="Style\Ranking.css" />
     <Content Include="Style\Summary.css" />
     <Content Include="Style\Validation.css" />
     <Content Include="Web.config">
@@ -160,6 +161,7 @@
     <Content Include="Views\Account\SignIn.cshtml" />
     <Content Include="Views\Account\LogIn.cshtml" />
     <Content Include="Views\Admin\Accounts.cshtml" />
+    <Content Include="Views\Main\Ranking.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

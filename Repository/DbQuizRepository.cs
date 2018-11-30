@@ -70,16 +70,16 @@ namespace Quiz_Zone.Repository
                 }
             }
             else
-            {
+            {              
                 var dbEntry = context.Categories.Find(category.CategoryID);
-                if(dbEntry != null)
+                if (dbEntry != null)
                 {
                     dbEntry.Name = category.Name;
                     dbEntry.Description = category.Description;
                     dbEntry.IconData = category.IconData;
                     dbEntry.IconMimeType = category.IconMimeType;
                     dbEntry.IconName = category.IconName;
-                }
+                }              
             }
             context.SaveChanges();
         }
