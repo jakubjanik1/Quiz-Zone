@@ -18,8 +18,8 @@ namespace Quiz_Zone.Controllers
         }
 
         public ViewResult Quizzes()
-        {
-            return View( repository.Categories );
+        {         
+            return View( GetCategoriesWithQuestions() );
         }
 
         public ViewResult Play(int categoryId)
@@ -27,13 +27,25 @@ namespace Quiz_Zone.Controllers
             var questions = TakeRandomQuestions(categoryId);
             return View( questions );
         }
-
+        
         public ViewResult Ranking(int categoryId = 1)
         {
             ViewBag.Categories = GetAllCategories();
             ViewBag.CurrentCategoryName = GetCurrentCategoryName(categoryId);
 
-            return View(GetScores(categoryId));
+            return View( GetScores(categoryId) );
+        }
+
+        [NonAction]
+        private IEnumerable<Category> GetCategoriesWithQuestions()
+        {
+            foreach (var category in repository.Categories)
+            {
+                if (repository.Questions.Any(x => x.Category == category))
+                {
+                    yield return category;
+                }
+            }
         }
 
         [NonAction]
@@ -71,6 +83,7 @@ namespace Quiz_Zone.Controllers
             }
             return null;
         }
+
         [NonAction]
         private IEnumerable<Category> GetAllCategories()
         {

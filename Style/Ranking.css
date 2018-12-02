@@ -43,7 +43,7 @@
     font-size: 16px;
 }
 
-#options a:first-child 
+#options a:first-child
 {
     border-radius: 10px 10px 0 0;
 }
@@ -52,6 +52,11 @@
 {
     border-radius: 0 0 10px 10px;
     border-bottom-width: 1px;
+}
+
+#options a:only-child
+{
+    border-radius: 10px;
 }
 
 #options a:hover 
