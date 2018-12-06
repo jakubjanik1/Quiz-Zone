@@ -36,6 +36,11 @@ namespace Quiz_Zone.Controllers
             return View( GetScores(categoryId) );
         }
 
+        public ViewResult Informations()
+        {
+            return View();
+        }
+
         [NonAction]
         private IEnumerable<Category> GetCategoriesWithQuestions()
         {

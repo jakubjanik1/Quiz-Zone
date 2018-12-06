@@ -1,0 +1,26 @@
+﻿.caption 
+{
+    font-size: 22px;
+    color: rgb(101, 116, 141);
+    display: inline-block;
+    margin: 25px;
+    font-weight: bold;
+}
+
+.content, .content > a
+{
+    font-size: 18px;
+    color: rgb(101, 116, 141);
+    line-height: 30px;
+}
+
+.content > a:hover
+{
+    text-decoration: underline;
+}
+
+ul
+{
+    margin: 0;
+    margin-left: 40px;
+}
