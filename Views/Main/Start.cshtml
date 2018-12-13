@@ -1,0 +1,24 @@
+﻿@{
+    Layout = "~/Views/_Layout.cshtml";
+}
+
+<h1>Witaj w <span id="logo">Quiz Zone</span></h1>
+
+<div id="wrapper">
+    <div class="offer">
+        Nie masz jeszcze konta???
+        <a href="@Url.Action("SignIn", "Account")">Zarejestruj się</a>
+    </div>
+
+    <div class="offer">
+        Jeśli już masz!!!
+        <a href="@Url.Action("LogIn", "Account")">Zaloguj się</a>
+    </div>
+
+    <div class="offer">
+        Możesz też zagrać bez zakładania konta!!!
+        <a href="@Url.Action("Quizzes", "Main")">Zagraj</a>
+    </div>
+</div>
+
+<h2>Miłej zabawy!!!</h2>

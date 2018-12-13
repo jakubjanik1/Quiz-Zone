@@ -17,6 +17,11 @@ namespace Quiz_Zone.Controllers
             repository = repo;            
         }
 
+        public ViewResult Start()
+        {
+            return View();
+        }
+
         public ViewResult Quizzes()
         {         
             return View( GetCategoriesWithQuestions() );

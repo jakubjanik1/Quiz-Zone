@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="~/Style/Lists.css" />
     <link rel="stylesheet" href="~/Style/Validation.css" />
     <link rel="stylesheet" href="~/Style/Ranking.css" />
+    <link rel="stylesheet" href="~/Style/Start.css" />
     <link rel="stylesheet" href="~/Style/Informations.css" />
     <link rel="stylesheet" href="~/Style/Fontello/fontello.css" />
     <link href="https://fonts.googleapis.com/css?family=Lato:400,900" rel="stylesheet">
@@ -62,11 +63,13 @@
         }
             
         <nav>
-            <div class="legend">Main</div>
-            <div class="option">
-                <i class="icon-home"></i>
-                <div class="optionContent" style="line-height: 44px;">Start</div>
-            </div>
+            <div class="legend">Główne</div>
+            <a href="@Url.Action("Start", "Main")">
+                <div class="option">
+                    <i class="icon-home"></i>
+                    <div class="optionContent" style="line-height: 44px;">Start</div>
+                </div>
+            </a>
             <a href="@Url.Action("Quizzes", "Main")">
                 <div class="option">
                     <i class="icon-quizzes"></i>
@@ -87,7 +90,7 @@
             </a>
         </nav>
         <nav>
-            <div class="legend">Admin</div>
+            <div class="legend">Administrator</div>
             <a href="@Url.Action("Accounts", "Admin")">
                 <div class="option">
                     <i class="icon-users"></i>
